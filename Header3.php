@@ -6,14 +6,17 @@
 <link rel = "stylesheet" type = "text/css" href = "Headerbtn.css">
 </head>
 <body>
+  <table align="right">
+  		 <tr>
+  <td><a href="index.php?logout">Logout</a></td>
+
     <div class="banner">
         <link rel="stylesheet" type="text/css" href="Styles/banner.css">
     </div>
 
         <div align="center" style="top:0px">
-            <tr>
-
-              <td>
+          <table width="1330" bgcolor="#FFFFFF">
+          <tr>
 
 			  <table align="center" style = "background-color:white;"width="1310">
                 <tr>

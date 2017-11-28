@@ -41,7 +41,7 @@ $_SESSION['cart'] = array();
 						$items[] = $r;
 					}
 
-		$itemArray = array($items[0][0]=>array('Proid' => $items[0][0], 'name'=>$items[0][2], 'brand'=>$items[0][3], 'desc'=>$items[0][6], 'quan'=>$_POST["quantity"], 'price'=>$items[0][4], 'image'=> $items[0][5]));
+		$itemArray = array($items[0][0]=>array('id' => $items[0][0], 'name'=>$items[0][2], 'brand'=>$items[0][3],  'quan'=>$_POST["quantity"], 'price'=>$items[0][4], 'image'=> $items[0][5]));
 
 		$_SESSION['cart'] += $itemArray;
 
@@ -92,13 +92,12 @@ $tp2 = 0;
 foreach ($_SESSION["cart"] as $item)
 {
 
-	$i = $item['Proid'];
+	$i = $item['id'];
 	$tp = $item['quan'] * $item['price'];
 	$tp2 += $tp;
 
-	echo "<td align = 'center'> ".$item['Proid'];
+	echo "<td align = 'center'> ".$item['id'];
 	echo "<td align = 'center'><img src = '".$item['image']."' height = 120 width = 120>";
-	echo "<td> ".$item['desc'];
 	echo "<td align = 'center'> ".$item['price'];
 	echo "<td align = 'center'> ".$item['quan'];
 	echo "<td align = 'center'>".$tp;

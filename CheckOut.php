@@ -36,7 +36,7 @@ $_SESSION['cart'] = array();
         <tr>
           <td width="91">First Name </td>
           <td width="172"><input name="sfname" type="text" class="in9" id="sfname" size="20" placeholder="First Name" maxlength = 10 tabindex="1" onblur = "alphabet()" required/>
-          <td width="99"><input name = "shipcharge" type="radio" value="Free Shipping"tabindex="10">          
+          <td width="99"><input name = "shipcharge" type="radio" value="Free Shipping"tabindex="10">
           $0.00</td>
           <td width="127">Free Shipping </td>
           <td width="20"><div align="center">
@@ -64,7 +64,7 @@ $_SESSION['cart'] = array();
           <td><input name="semail" type="email" class = "in9" id="semail" placeholder="E-mail" tabindex="3" onblur = "validateE()"required/></td>
           <td colspan="4" rowspan="5">   <div id ="creditcard" style="visibility:hidden;">       <table cellspacing="5" cellpadding="5" style = "border :1px solid #07aaf6; border-radius:5px;">
             <tr>
-              <td>Credit Card Type  
+              <td>Credit Card Type
               <td><select name="Ctypes" class="in11" id="Ctypes">
                 <option selected>Visa</option>
                 <option>MasterCard</option>
@@ -72,19 +72,19 @@ $_SESSION['cart'] = array();
               </select></td>
             </tr>
             <tr>
-              <td>Name on Credit Card  
+              <td>Name on Credit Card
               <td><input name="Nc" type="cname" class = "in9" id="Nc"></td>
             </tr>
             <tr>
-              <td>Credit Card Number 
+              <td>Credit Card Number
               <td><input name="CCno" type="cnum" class = "in9" id="CCno" maxlength = 16>                  </td>
             </tr>
             <tr>
-              <td>CVV 
+              <td>CVV
               <td><input name="cvv" type="cvv" class = "in9" id="cvv">                  </td>
             </tr>
             <tr>
-              <td>Expiration Date 
+              <td>Expiration Date
               <td><select name="mon" class="in12" id="mon">
                       <option selected="selected">Month</option>
                       <option>01</option>
@@ -141,8 +141,8 @@ $_SESSION['cart'] = array();
         <tr>
           <td> State </td>
           <td><select name="select2" class="in11" tabindex="6">
-   
-			
+
+
 <option>Arunachal Pradesh
 <option>Andhra Pradesh
 <option>Bihar
@@ -222,32 +222,31 @@ $_SESSION['cart'] = array();
 
 echo "<table cellspacing = 5 cellpadding = 3 width = 700> <tr align = center  style = 'background-color:#e8e9e7;'>";
 
-echo "<b><td> <strong>Product Id <td> <strong> Product Name <td><strong> Price <td><strong>Quantity<td> <strong> <strong>Sub Total </td><tr>";		
-	
+echo "<b><td> <strong>Product Id <td> <strong> Product Name <td><strong> Price <td><strong>Quantity<td> <strong> <strong>Sub Total </td><tr>";
+
 $tp2 = 0;
 
 foreach ($_SESSION["cart"] as $item)
 {
-	
-	$i = $item['Proid'];
+
+	$i = $item['id'];
 	$tp = $item['quan'] * $item['price'];
 	$tp2 += $tp;
 
-	echo "<td align = 'center'> ".$item['Proid'];
+	echo "<td align = 'center'> ".$item['id'];
 	//echo "<td align = 'center'><img src = '".$item['image']."' height = 90 width = 90>";
-	echo "<td> ".$item['desc'];
 	echo "<td align = 'center'> ".$item['price'];
-	echo "<td align = 'center'> ".$item['quan'];	
+	echo "<td align = 'center'> ".$item['quan'];
 	echo "<td align = 'center'>".$tp;
-	
+
 	echo "<tr>";
-	
-	
+
+
 }
 
 	echo "</tr>";
 	echo "<tr style = 'background-color:#e8e9e7;'> <td colspan = 4 align = right>Grand Total : <td align = 'center'> <span style = 'font-family:Rupee Foradian'><strong>$ </span>".$tp2;;
-	echo "<td> </tr></table>";	
+	echo "<td> </tr></table>";
 ?>          </td>
         </tr>
         <tr>
@@ -269,8 +268,8 @@ foreach ($_SESSION["cart"] as $item)
         <tr>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
-          <td colspan="6">          
-            
+          <td colspan="6">
+
             <div align="right">
               <input type="submit" class = "Addtocart" name="submit" value="Place Order Now">
             </div></td>
@@ -278,11 +277,11 @@ foreach ($_SESSION["cart"] as $item)
       </table>
 </form>
 
-<?php	
+<?php
 }
 
 else
-	
+
 {
 	echo "<h2 style = 'color:red;'> Please Login First or Sign up Now......</h2>";
 
