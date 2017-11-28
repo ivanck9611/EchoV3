@@ -14,12 +14,12 @@ if(isset($_SESSION['name']))
 	$p = $_SESSION['name'];
 }
 ?>
-
+				<div class="banner">
+					<link rel="stylesheet" type="text/css" href="Styles/banner.css">
+					</div>
         <div align="center" style="top:0px">
-          <table width="1330" bgcolor="#FFFFFF">
+          <table width="" bgcolor="#FFFFFF">
             <tr>
-			 <td><img src="FashionMode.png" alt="FashionMode.com">
-			</td>
             </tr>
             <tr>
               <td>

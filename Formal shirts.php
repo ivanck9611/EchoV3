@@ -8,7 +8,7 @@
 
 include 'Connection.php';
 
-$result = mysqli_query($db,"SELECT * FROM men where ProductType='Formal shirts'");
+$result = mysqli_query($db,"SELECT * FROM router");
 
 echo "<h1  class = 'f'> Formal shirts</h1><hr>";
 
@@ -16,19 +16,22 @@ echo "<table cellspacing = 10 cellpadding = 10 style='font-family:Futura Lt BT; 
 
 $c = 0;
 
+//p=category p2=id p3=name
 while($row = mysqli_fetch_array($result))
-{	
-$c++;	
+{
+$c++;
 
-echo "<td class = 'imgbg'>  
-<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['Imagepath']."' height = 307 width = 230> </a><br> <span style = 'font-family:Rupee Foradian'>$ </span>".$row['Price']."<br>".$row['Description'];
+echo "<td class = 'imgbg'>
+<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['path']."' height = 245 width = 245> </a
+><br>
+<span style = 'font-family:Rupee Foradian'>$ </span>".$row['price'];
 
-if($c == 4)
+if($c == 3)
 {
 echo "<tr>";
 }
 
-if($c >= 4)
+if($c >= 3)
 {
 $c = 0;
 }

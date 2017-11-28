@@ -17,17 +17,18 @@ height:30%;
 .t
 {
 table-layout:fixed;
-background-color:#656565;
+background-color:#333;
+font-size: 20px;
 font-family:Arial, Helvetica, sans-serif;
-width:1310;
-height:40;
+width:100%;
+height:10%;
 color:White;
 border-color:2px solid black;
 }
 
-.menu:hover 
+.menu:hover
 {
-background-color:white;
+background-color:#222;
 color:black;
 }
 
@@ -62,8 +63,8 @@ padding:14px;
 
 .in2
 {
-border-radius :10px; 
-height:30px; 
+border-radius :10px;
+height:30px;
 padding: 5px;
 }
 
@@ -79,16 +80,16 @@ width:180px;
 padding:14px;
 
 }
-.button2 
-{ 
+.button2
+{
 height:35px;
 width:210px;
 background-color:#00CC66;
 font-weight:bold;
 }
 
-.button3 
-{ 
+.button3
+{
 height:35px;
 width:160px;
 background-color:rgb(34,218,109);
@@ -96,8 +97,8 @@ font-weight:bold;
 color:white;
 
 }
-.button4 
-{ 
+.button4
+{
 height:35px;
 width:100px;
 background-color:rgb(34,218,109);
@@ -112,7 +113,7 @@ color:white;
 border:  0px;
 font-size:15px;
 background-color:white;
-font-family:Futura Lt BT; 
+font-family:Futura Lt BT;
 font-weight:400;
 }
 
@@ -182,13 +183,13 @@ border-radius:3px;
 
 border: 1px inset;
 font-size:15px;
-font-family:Futura Lt BT; 
+font-family:Futura Lt BT;
 font-weight:400;
 }
 
 
 .Addtocart
-{ 
+{
 height:35px;
 width:200px;
 background-color:#07aaf6;
@@ -197,7 +198,7 @@ color:white;
 }
 
 .d
-{ 
+{
 height:35px;
 width:110px;
 background-color:#07aaf6;
@@ -206,18 +207,18 @@ color:white;
 }
 
 .button5
-{ 
+{
 height:30px;
 width:100px;
 background-color:#07aaf6;
 font-weight:600;
 color:white;
 }
-.button 
-{ 
+.button
+{
 width: 100px;
 padding: 5px;
 background-color:#07aaf6;
-// box-shadow: -5px 8px 10px 3px rgba(0,0,0,0.1); 
+// box-shadow: -5px 8px 10px 3px rgba(0,0,0,0.1);
 color:white;
 }

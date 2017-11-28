@@ -6,20 +6,22 @@ h6
 }
 
 
-.btn 
-{ 
-height:35px;
-width:259px;
-background-color:#656565;
-color:white;
-font-size:16px;
-border:0px solid white;
+.btn
+{
+  background-color: #333;
+  color: white;
+  width:100%;
+  height: 80px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  border:0px solid white;
 }
 
-.btn:hover 
+.btn:hover
 {
-background-color:white;
-color:black;
+  background-color: #111;
+  float: right;
 }
 
 .btn:focus
@@ -29,21 +31,22 @@ color:black;
 }
 
 
-.btn2 
-{ 
-height:35px;
-width:210px;
-background-color:#656565;
-color:white;
-font-size:16px;
-border:1px solid black;
+.btn2
+{
+  background-color: #333;
+  color: white;
+  width:100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  border:0px solid white;
 }
 
 
-.btn2:hover 
+.btn2:hover
 {
-background-color:white;
-color:black;
+  background-color: #111;
+  float: right;
 }
 
 .btn2:focus
@@ -55,41 +58,40 @@ color:black;
 
 
 
-.btn3 
-{ 
-height:45px;
-width:210px;
-background-color:white;
-color:black;
-font-size:20px;
-border:1px solid white;
-text-align:left;
-font-family:Gabriola;
+.btn3
+{
+  background-color: #333;
+  color: white;
+  width:100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  border:0px solid white;
 }
 
 
-.btn3:hover 
+.btn3:hover
 {
 
-background-color:#FF2B95; 
+  background-color: #111;
+  float: right;
+
+}
+
+.btn3:focus
+{
+
+background-color:#FF2B95;
 color:#FFFFFF;
 
 }
 
-.btn3:focus 
+
+
+
+
+.btn4
 {
-
-background-color:#FF2B95; 
-color:#FFFFFF;
-
-}
-
-
-
-
-
-.btn4 
-{ 
 height:70px;
 width:210px;
 background-color:white;
@@ -101,25 +103,25 @@ font-family:Gabriola;
 }
 
 
-.btn4:hover 
+.btn4:hover
 {
 
-background-color:#FF2B95; 
+background-color:#FF2B95;
 color:#FFFFFF;
 
 }
 
-.btn4:focus 
+.btn4:focus
 {
 
-background-color:#FF2B95; 
+background-color:#FF2B95;
 color:#FFFFFF;
 
 }
 
 
-.btn5 
-{ 
+.btn5
+{
 height:45px;
 width:210px;
 background-color:white;
@@ -130,17 +132,16 @@ text-align:left;
 font-family:Gabriola;
 }
 
-.btn5:hover 
+.btn5:hover
 {
 
-background-color:#2492FF; 
+background-color:#2492FF;
 color:#FFFFFF;
 }
 
-.btn5:focus 
+.btn5:focus
 {
 
-background-color:#2492FF; 
+background-color:#2492FF;
 color:#FFFFFF;
 }
-

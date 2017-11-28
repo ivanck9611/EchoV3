@@ -1,14 +1,19 @@
-<!DOCTYPE html >
-<head>
-<title>Untitled Document</title>
-<link rel = "stylesheet" type = "text/css" href = "mystyle.css">
-<link rel = "stylesheet" type = "text/css" href = "menu.css">
-</head>
-<body >
-<table width="1340" bgcolor="#999898" style=" color:white; bottom:0px; font-size:20px;">
-  <tr>
-    <td class = "f" align="center">Copyright&copy;2016 FashionMode.com  </td>
-  </tr>
-</table>
-</body>
-</html>
+<link type="text/css" rel="stylesheet" href="Styles/footer.css" />
+<hr>
+
+<div class="left footertext">
+     <a href="index.php">Home</a>
+     <a href="index.php">Shop Collection</a>
+     <a href="index.php">Our Story</a>
+
+</div>
+
+<div class="center">
+     <img src="img/echotm.png" style="width:200px">
+</div>
+
+<div class="right footertext">
+     <a href="index.php">Facebook</a>
+     <a href="index.php">Instagram</a>
+     <a href="index.php">Twitter</a>
+</div>

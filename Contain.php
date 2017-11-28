@@ -10,10 +10,10 @@
 
 <table width="250"  border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
                 <tr>
-                    <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Men's Corner</td>
+                    <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Collection</td>
                 </tr>
 				  <tr>
-                    <td><a href = "Formal shirts.php" target = "myframe"><button class = "btn5">Formal shirts</button> </a></td>
+                    <td><a href = "Formal shirts.php" target = "myframe"><button class = "btn5">Router</button> </a></td>
                   </tr>
                   <tr>
                     <td><a href = "Slogan T-shirts.php" target = "myframe"><button class = "btn5">Slogan T-shirts</button> </a></td>
@@ -28,13 +28,13 @@
                     <td><a href = "Full sleeve Tees.php" target = "myframe"><button class = "btn5">Full sleeve Tees</button> </a></td>
                   </tr>
 
-	             
+
               </table></td>
 
             </tr>
             <tr>
               <td><table width="250" border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
-                  
+
                 <tr>
                     <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Woman's Corner</td>
                 </tr>
@@ -62,7 +62,7 @@
                   <tr>
                     <td><a href = "WesternWall.php" target = "myframe"><button class = "btn3">Western Wall</button></td>
                   </tr>
-                 
+
               </table></td>
             </tr>
 
