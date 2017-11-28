@@ -12,7 +12,7 @@ else
 
 ?>
 
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <head>
 <title>Update Product</title>
 
@@ -20,37 +20,22 @@ else
 <link rel = "stylesheet" type = "text/css" href = "mystyle.css">
 </head>
 <body>
- <h1 align = center class = "f"> Update Product </h1><hr> 
+ <h1 align = center class = "f"> Update Product </h1><hr>
 
-<form method="post" action="<?php $_PHP_SELF ?>"> 
+<form method="post" action="<?php $_PHP_SELF ?>">
 <table  border="0" cellpadding="9" cellspacing="9">
   <tr>
-    <td>Category :</td>
-    <td>
-<input type="radio" name="cat" value="men" >        
-Men  
- &nbsp;&nbsp;  &nbsp;
-        <input type="radio" name="cat" value="woman" required>
-        Woman </td>
 	<td>Product Type :</td>
     <td><select name="menu1" required>
       <option value = ""> ------------------------Select------------------------</option>
       <optgroup name = "menclothes" label = "Men's Clothes">
-      <option> Formal shirts</option>
-      <option> Slogan T-shirts</option>
-      <option> V-neck T-shirts</option>
-      <option> Round neck T-shirts</option>
-      <option> Full sleeve Tees</option>
-      </optgroup>
-      <optgroup name = "womanclothes" label = "Woman's Clothes">
-      <option> Dresses-Anarkalis</option>
-      <option> Indo-Ethnic Kurtas And Tops</option>
-      <option> Saris</option>
-      <option> Skirts</option>
-      <option> Trousers and shorts-Pants And Palazzos</option>
-      <option> Tshirts-Shirts</option>
-      <option> Wedding clothing</option>
-      <option> Western Wall</option>
+        <option> router</option>
+        <option> speaker</option>
+        <option> hi-fi</option>
+        <option> portable speaker</option>
+        <option> headphone</option>
+        <option> mouse</option>
+        <option> keyboard</option>
       </optgroup>
     </select> </td>
 	<td>Brand : </td>
@@ -59,28 +44,15 @@ Men
       <option value = ""> ------------------------Select------------------------</option>
 	 <option value = "None">None</option>
 	  <optgroup name = "Man's Brand" label = "Man's Brand">
-	<option> Spykar </option>
+	<option> ASUS </option>
 	<option>Turtle </option>
 	<option>Tom Hatton </option>
 	<option>Peter England </option>
 	<option>LondonBridge </option>
 	<option>Lotto </option>
-<optgroup name = "woman's Brand" label = "Woman's Brand">
-     
-      <option>Bombay Fashion</option>
-      <option>Kiari</option>
-      <option>Aurilia</option>
-      <option>Allen Solly</option>
-      <option>Karigari</option>
-      <option>Morden Fashion</option>
-      <option>Shripa</option>
-	  <option>Women</option>
-	  <option>Bombay Style</option>
-	  <option>Varsiddhi</option>
-    </select>
 	</td>
 	<td><input name="submit" type = "submit"  name = "submit" value = "Display" class="d"> </td>
-  </tr> 
+  </tr>
   </table>
 </form>
 </body>
@@ -99,15 +71,13 @@ include 'Connection.php';
 if(isset($_POST['submit']))
 {
 
-$cate = $_POST['cat'];
-
 $m = $_POST['menu1'];
 
 $b = $_POST['brands'];
 
-if($cate == 'men')
+if($m == 'router')
 {
-	$result = mysqli_query($db,"SELECT * FROM men where ProductType = '$m' and Brand = '$b'");
+	$result = mysqli_query($db,"SELECT * FROM router where category = '$m' and Brand = '$b'");
 }
 
 else
@@ -126,8 +96,8 @@ while($row = mysqli_fetch_array($result))
 	$count++;
 	$id = $row[0];
 
-	echo "<td style = 'background-color:#e8e9e7;'><a href = 'UpdateItemsDetails.php?i=$id&c=$cate'> <img src = '".$row[5]."' height = 307 width = 230> </a>";
-	
+	echo "<td style = 'background-color:#e8e9e7;'><a href = 'UpdateItemsDetails.php?i=$id&c=$m'> <img src = '".$row[5]."' height = 307 width = 230> </a>";
+
 	if($count == 5)
 	{
 		echo "<tr>";
@@ -136,7 +106,7 @@ while($row = mysqli_fetch_array($result))
 	{
 		$count = 0;
 	}
-	
+
 
 }
 

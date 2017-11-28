@@ -4,7 +4,7 @@
 <link rel = "stylesheet" type = "text/css" href = "menu.css">
 </HEAD>
 <BODY>
-<h1 align = center class = "f"> Update Product </h1><hr> 
+<h1 align = center class = "f"> Update Product </h1><hr>
 
 <?php
 
@@ -17,10 +17,10 @@ $pid = $_GET['i'];
 $c = $_GET['c'];
 
 
-if($c == 'men')
+if($c == 'router')
 {
 
-$query = "select * from men where Product_id = '$pid'";
+$query = "select * from router where id = '$pid'";
 
 $r = mysqli_query($db,$query) or die("There is no Data");
 
@@ -42,7 +42,7 @@ echo "<div style = 'visibility:hidden;'><input type = 'text' name = 'cat' value 
 
 while($row6 = mysqli_fetch_row($r))
 {
-	
+
 echo " <td align = center rowspan= 7><img src ='".$row6[5]."' class = 'imgbg' height = 307 width = 230><br></td>";
 echo " <td>Product Id :<td> <input type = 'text' class = 'in7' name = 'id' value = '".$row6[0]."' size = 60 readonly> </td>";
 echo "</tr> <tr>";
@@ -50,15 +50,13 @@ echo " <td>Product Name <td><input type = 'text' name = 'pn' class = 'in7' value
 echo "</tr> <tr>";
 echo " <td>Brand <td> <input type = 'text' name = 'b' class = 'in7' value = '".$row6[3]."' size = 60 readonly> </td>";
 echo "</tr> <tr>";
-echo " <td>Description<td><input type = 'text' name = 'd' class = 'in60' value = '".$row6[6]."' size = 60 required> </td>";
-echo "</tr> <tr>";
 echo " <td>Price<td><span style = 'font-family:Rupee Foradian'>$ </span> <input type = 'text' class = 'in60' name = 'p' value = '".$row6[4]."' size = 58 required> </td>";
 
 echo "</tr> <tr>";
 echo "<td colspan = 2><button type = 'submit'  class = 'Addtocart'name = 'submit'> Update </button></td>";
 echo "</tr> <tr>";
 echo "<td colspan = 2>&nbsp;</td>";
-	
+
 }
 
 
