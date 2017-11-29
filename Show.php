@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<p align = center><embed src = "NewSlideShow.swf" height = 50% width = 100%> </embed></p>
+<p align = center><embed src = "NewSlideShow.swf" height = 400 width = 800 > </embed></p>
 
 </body>
 <html>

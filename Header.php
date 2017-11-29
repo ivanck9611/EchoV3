@@ -95,35 +95,33 @@ text-align:center;
 	    </td></div>
 
   </tr>
+
 </table>
 
   <div class="banner">
       <link rel="stylesheet" type="text/css" href="Styles/banner.css">
   </div>
 
+  <div align="center" style="top:0px">
+       <table align="center" class = "t">
+               <tr>
 
+               <td class="menu" style = "text-align:center"><a href="index.php"><button class = "btn">Home</button></a></td>
 
-        <div align="center" style="top:0px">
-			  <table align="center" class = "t">
-                <tr>
+         <td style = "text-align:center" class = "menu">
+           <div class="dropdown">Category
+         <div class="dropdown-content">
+           <a href="Menwear.php" target= "myframe">Men's Wear</a>
+         <a href="WomanWear.php" target= "myframe">Woman's Wear </a>
+         </div> </div></td>
 
-                <td class="menu" style = "text-align:center"><a href="index.php"><button class = "btn">Home</button></a></td>
-
-					<td style = "text-align:center" class = "menu">
-            <div class="dropdown">Category
-          <div class="dropdown-content">
-            <a href="Menwear.php" target= "myframe">Men's Wear</a>
-					<a href="WomanWear.php" target= "myframe">Woman's Wear </a>
-				  </div> </div></td>
-
-                  <td style = "text-align:center"><a href="AboutUs.html" target= "myframe"><button class = "btn"> About us</button></td>
-                    <td style = "text-align:center"><a href = "ContactUs.php" target = "myframe"><button class = "btn">Contact us</button></a></td>
-                  <td style = "text-align:center"><a href = "Cart.php" target = "myframe"><button class = "btn">Cart</button></a></td>
-                </tr>
-		      </table></td>
-                  </tr>
-
-</div>
+                 <td style = "text-align:center"><a href="AboutUs.html" target= "myframe"><button class = "btn"> About us</button></td>
+                   <td style = "text-align:center"><a href = "ContactUs.php" target = "myframe"><button class = "btn">Contact us</button></a></td>
+                 <td style = "text-align:center"><a href = "Cart.php" target = "myframe"><button class = "btn">Cart</button></a></td>
+               </tr>
+         </table></td>
+                 </tr>
+               </div>
 <div id="signupscreen">
 		<a href="#" class="cancel">&times;</a>
 		<?php include 'signup.php'; ?>

@@ -10,7 +10,7 @@ include 'Connection.php';
 
 $result = mysqli_query($db,"SELECT * FROM router");
 
-echo "<h1  class = 'f'> Formal shirts</h1><hr>";
+echo "<p class = 'f'> ROUTER</p>";
 
 echo "<table cellspacing = 10 cellpadding = 10 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
 

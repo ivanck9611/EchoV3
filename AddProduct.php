@@ -16,12 +16,12 @@ else
 <link rel = "stylesheet" type = "text/css" href = "menu.css">
 <link rel = "stylesheet" type = "text/css" href = "mystyle.css">
 <script language = "javascript">
-function seeList(form) 
+function seeList(form)
 {
 	var result = ""
-	for (var i = 0; i < form.menu1.length; i++) 
+	for (var i = 0; i < form.menu1.length; i++)
 	{
-		if (form.menu1.options[i].selected) 
+		if (form.menu1.options[i].selected)
 		{
 			result += "\n " + form.menu1.options[i].label
 		}
@@ -35,25 +35,23 @@ function seeList(form)
 
 <h1 align = center class = "f"> Add Products </h1>
 <hr>
-<form  method="post" action="<?php $_PHP_SELF ?>" enctype = "multipart/form-data"> 
+<form  method="post" action="<?php $_PHP_SELF ?>" enctype = "multipart/form-data">
 <table width="450" cellpadding="9" cellspacing="9">
-  <tr>
-    <td>Category</td>
-    <td>
-<input type="radio" name="cat" value="men" >        
-Men  
- &nbsp;&nbsp;  &nbsp;
-        <input type="radio" name="cat" value="woman" required>
-        Woman </td>
-  </tr>
+	<tr>
+	 <td>name</td>
+	 <td>
 
+				 <textarea name="name" rows="1" cols="35" required ></textarea>
+				 <div style = "visibility:hidden;"><input type = "text" name = "lable" id = "optionlable"></div></td>
+ </tr>
+ <tr>
   <tr>
     <td>Brand Name</td>
     <td><select name="brands" class = "in40">
       <option> ------------------------Select------------------------</option>
 	 <option value = "None">None</option>
 <optgroup name = "MansBrand" label = "Man's Brand">
-	<option value = "Spykar"> Spykar </option>
+	<option value = "ASUS"> ASUS </option>
 	<option value = "Turtle">Turtle </option>
 	<option value = "Tom Hatton">Tom Hatton </option>
 	<option value = "Peter England">Peter England </option>
@@ -79,14 +77,18 @@ Men
 <select name="menu1" id = "m" class = "in40">
 <option> ------------------------Select------------------------</option>
 <optgroup name = "menclothes" label = "Men's Clothes">
-<option  label = "Formal shirts" value="Collection/Men/Formal Shirts/"> Formal shirts</option>
+<option  label = "router" value="router"> router</option>
 <option label = "Slogan T-shirts" value="Collection/Men/slogan/"> Slogan T-shirts</option>
 <option label = "V-neck T-shirts" value="Collection/Men/Vneck/"> V-neck T-shirts</option>
 <option label = "Round neck T-shirts" value="Collection/Men/Rneck/"> Round neck T-shirts</option>
 <option label = "Full sleeve Tees" value="Collection/Men/Full sleev/"> Full sleeve Tees</option>
 </optgroup>
+    </select>  </tr>
+
+
+<select name="menu2" id = "m" class = "in40">
 <optgroup name = "womanclothes" label = "Woman's Clothes">
-<option label = "Dresses-Anarkalis" value="Collection/Woman/Dresses-Anarkalis/"> Dresses-Anarkalis</option>
+<option label = "Dresses-Anarkalis" value="img/products/router/"> router img</option>
 <option label = "Indo-Ethnic Kurtas And Tops" value="Collection/Woman/Indo-Ethnic Kurtas & Tops/"> Indo-Ethnic Kurtas And Tops</option>
 <option label = "Saris" value="Collection/Woman/Saree/"> Saris</option>
 <option label = "Skirts" value="Collection/Woman/Skirt/"> Skirts</option>
@@ -95,14 +97,8 @@ Men
 <option label = "Wedding clothing" value="Collection/Woman/Weddingclothing/"> Wedding clothing</option>
 <option label = "Western Wall" value="Collection/Woman/WesternWall/"> Western Wall</option>
 </optgroup>
-    </select>  </tr>  <tr>
-    <td>Description</td>
-    <td>     
-     
-          <textarea name="Description" rows="5" cols="35" required ></textarea>     
-          <div style = "visibility:hidden;"><input type = "text" name = "lable" id = "optionlable"></div></td>
-  </tr>
-  <tr>
+    </select>  </tr>
+
     <td>Price</td>
     <td style = "font-family:Rupee Foradian">$
       <input type="text" name="price" size = 16 required>        </td>
@@ -123,7 +119,7 @@ Men
 </body>
 </html>
 
-<?php 
+<?php
 
 }
 
@@ -136,14 +132,14 @@ include 'Connection.php';
 
 if(isset($_POST['submit']))
 {
-	
-$c = $_POST['cat'];
+
+$n = $_POST['name'];
 
 $b = $_POST['brands'];
 
-$path = $_POST['menu1'];
+$c = $_POST['menu1'];
 
-$desc = $_POST['Description'];
+$path = $_POST['menu2'];
 
 $p = $_POST['price'];
 
@@ -151,21 +147,18 @@ $lab =  trim($_POST['lable']);
 
 $tf = $path.basename($_FILES['FileToUpload']['name']);
 
-$np = "/PJ/".$tf;
+$np = "/poject/".$tf;
 
-if($c == 'men')
+if($c == 'router')
 {
-	mysqli_query($db,"INSERT INTO men(ProductType, Brand, Price, Imagepath, Description) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO router(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 
 elseif($c == 'woman')
 {
 	mysqli_query($db,"INSERT INTO woman(ProductType, Brand, Price, Imagepath, Description) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
 }
-else
-{
-	echo "Please Select Category...";
-}
+
 
 $flag = "";
 
@@ -173,12 +166,12 @@ if($_FILES['FileToUpload']['name'] != "" )
 {
 $fileType = pathinfo($tf,PATHINFO_EXTENSION);
 
-$check = getimagesize($_FILES['FileToUpload']['tmp_name']);	
+$check = getimagesize($_FILES['FileToUpload']['tmp_name']);
 
 if($check == true)
 {
 	$flag = 1;
-}	
+}
 
 else
 {

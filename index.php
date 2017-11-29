@@ -23,9 +23,15 @@ unset($_SESSION['Admin']);
 <body>
 <?php include 'InputHeader.php'; ?>
 
-<iframe src = "Contain.php" style = " border: 0px; height:1070px; width:260px;" seamless="seamless"></iframe>
-<iframe src = "Show.php" style = " border : 0px;width:1060px; height:1070px " name="myframe" seamless="seamless">
+<iframe src = "Contain.php" style = " border: 0px; height:1200px; width:25%;" seamless="seamless">
 </iframe>
+<iframe src = "Show.php" style = " border : 0px;width:100%; height:1070px;position:absolute;" name="myframe" seamless="seamless">
+</iframe>
+
+
+<footer>
  <?php include 'Footer.php'; ?>
+</footer>
+
 </body>
 </html>
