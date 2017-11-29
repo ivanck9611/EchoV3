@@ -8,7 +8,7 @@
 <h1 class = "f">Contact Us</h1>
 <hr>
 
-<h2 class = "f">send us Message Now</h2>
+<h2 class = "f">Send us Message Now</h2>
 <form name="ContactUs" method="post" action="<?php $_PHP_SELF ?>">
 
 <table width="400" style="font-family:Futura Lt BT;" cellspacing="8" cellpadding="3" >
@@ -51,11 +51,17 @@ $n = $_POST['name'];
  $m = $_POST['message'];
 
 
-$query2 = "INSERT INTO contactus(name, email, subject, message) VALUES('".$n."', '".$eid."', '".$s."', '".$m."')";
+$query2 = "INSERT INTO contactus(name, email, subject, message) VALUES('".$n."', '".$eid."', '".$s."', '".$m."')" ;
 
-mysqli_query($db,$query2) or die("Failed to load data in database");
+echo "Message Sucessfully Sended";
 
-
+mysqli_query($db,$query2)  or die("Failed to load data in database");
 mysqli_close($db);
 }
+
+
+
+
+
+
 ?>
