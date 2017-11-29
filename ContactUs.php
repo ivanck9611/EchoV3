@@ -2,35 +2,32 @@
 <head>
 <title>Contact Us</title>
 <link rel = "stylesheet" type = "text/css" href = "menu.css">
+<link rel = "stylesheet" type = "text/css" href = "Styles/contactus.css">
 <link rel = "stylesheet" type = "text/css" href = "mystyle.css">
 </head>
 <body>
-<h1 class = "f">Contact Us</h1>
-<hr>
+</br></br>
+<p class = 'f'> CONTACT US</p>
+  <form id="contact" action="" method="post">
+    <h3>Send us a message</h3>
+    <h4>Contact us for custom quote</h4>
+    <fieldset>
+      <input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input name="email" placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input name="subject" placeholder="Subject" type="tel" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <textarea name="message" placeholder="Type your message here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="send" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
 
-<h2 class = "f">Send us Message Now</h2>
-<form name="ContactUs" method="post" action="<?php $_PHP_SELF ?>">
-
-<table width="400" style="font-family:Futura Lt BT;" cellspacing="8" cellpadding="3" >
-
-<tr>
-<td> Name <br><input type="text" name="name" class = "in50" size="30" required></tr>
-
-<tr>
-<td> Email <br><input type="email" name="email"  class = "in50" size="30" required></tr>
-
-<tr>
-<td> Subject <br><input type="text" name="subject" size="30" class = "in50" required></tr>
-
-<tr>
-<td> Message <br><textarea name="message" cols = 40 rows =10 class = "in50" required> </textarea></td>
-</tr>
-
-<tr>
-<td align="left"><input type="Submit" name="Send" value="Send" class="button">&nbsp; <input type="reset" name="Reset" value="Clear" class="button"></td>
-</tr>
-</table>
-</form>
 </body>
 </html>
 

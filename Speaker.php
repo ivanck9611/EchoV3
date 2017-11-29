@@ -16,11 +16,12 @@ echo "<table cellspacing = 10 cellpadding = 10 style='font-family:Futura Lt BT; 
 $c = 0;
 
 while($row = mysqli_fetch_array($result))
-{	
-$c++;	
+{
+$c++;
 
-echo "<td class = 'imgbg'>  
-<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['Imagepath']."' height = 307 width = 230> </a><br> <span style = 'font-family:Rupee Foradian'>$ </span>".$row['Price']."<br>".$row['Description'];
+echo "<td class = 'imgbg'>
+<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['Imagepath']."' height = 307 width = 230> </a><br>
+<span style = 'font-family:Rupee Foradian'>$ </span>".$row['Price']."<br>".$row['Description'];
 
 if($c == 4)
 {
