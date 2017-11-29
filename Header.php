@@ -4,12 +4,12 @@
 <style type="text/css">
 .button
 {
-  background-color: #333;
-  color: white;
-  width:70px;
-  height: 100%;
-  border: none;
-  cursor: pointer;
+    width: 116px;
+    height: 50%;
+    padding: 5px;
+    background-color: #555;
+    color: white;
+    border-radius: 5px;
 }
 #cover
 {

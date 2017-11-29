@@ -72,13 +72,15 @@ padding:14px;
 
 .in2
 {
-border-radius :10px;
-height:30px;
-padding: 5px;
+  border-radius: 5px;
+  height: 30px;
+  padding: 8px;
 }
 
 a
-{ text-decoration:none;
+{
+  text-decoration:none;
+  font-size: 30;
 }
 .in3
 {
