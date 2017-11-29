@@ -1,0 +1,6 @@
+Beyerdynamic Bryon - $40.98
+Sennheiser Momentum M2 IEi- $99.95
+AKG N40 -$399.95
+Shure SE846-CL- $999.00
+
+INSERT INTO `headphone` (`id`, `Category`, `name`, `brand`, `price`, `path`) VALUES (NULL, 'headphone', '1More Triple Driver In-Ear Headphones', '1More', '71.47', 'img/products/headphone/1More Triple Driver In-Ear Headphones.png');	
