@@ -6,8 +6,9 @@
 <link rel = "stylesheet" type = "text/css" href = "mystyle.css">
 </head>
 <body>
-</br></br>
 <p class = 'f'> CONTACT US</p>
+</br>
+<hr>
   <form id="contact" action="" method="post">
     <h3>Send us a message</h3>
     <h4>Contact us for custom quote</h4>

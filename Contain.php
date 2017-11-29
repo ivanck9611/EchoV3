@@ -8,12 +8,13 @@
 
 <body>
 
-<table width=25%  border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
+<table class="t3" border:"0">
                 <tr>
-                    <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Collection</td>
+                    <td align="center" style=" color:#333; font-family:gurmukhi sangam mn;">
+                      <strong>Collection</strong></td>
                 </tr>
 				  <tr>
-                    <td><a href = "Router.php" target = "myframe"><button class = "btn5" style="vertical-align:middle"><span>Router</span></button> </a></td>
+                    <td class="td3"><a href = "Router.php" target = "myframe"><button class = "btn5" style="vertical-align:middle"><span>Router</span></button> </a></td>
                   </tr>
           <tr>
                     <td><a href = "Headphone.php" target = "myframe"><button class = "btn5"><span>Headphone</span></button> </a></td>
@@ -38,40 +39,6 @@
               </table></td>
 
             </tr>
-            <tr>
-              <td><table width="25%" border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
-
-                <tr>
-                    <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Woman's Corner</td>
-                </tr>
-                  <tr>
-						<td><a href = "Dresses-Anarkalis.php" target = "myframe"><button class = "btn3">Dresses-Anarkalis</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "Indo-Ethnic Kurtas & Tops.php" target = "myframe"><button class = "btn3">Indo-Ethnic Kurtas & Tops</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "Saris.php" target = "myframe"><button class = "btn3">Saris</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "Skirts.php" target = "myframe"><button class = "btn3">Skirts</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "Trousers and shorts-Pants & Palazzos.php" target = "myframe"><button class = "btn4">Trousers and shorts-Pants & Palazzos</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "Tshirts-Shirts-Tunics-maxi-gown.php" target = "myframe"><button class = "btn3">Tshirts & Shirts</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "WeddingClothing.php" target = "myframe"><button class = "btn3">Wedding clothing</button> </a></td>
-                  </tr>
-                  <tr>
-                    <td><a href = "WesternWall.php" target = "myframe"><button class = "btn3">Western Wall</button></td>
-                  </tr>
-
-              </table></td>
-            </tr>
-
           </table>
 
 </body>

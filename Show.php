@@ -10,7 +10,7 @@ body {font-family: Verdana,sans-serif;}
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
-  position: relative;
+  position: absolute;
   margin: auto;
 }
 
