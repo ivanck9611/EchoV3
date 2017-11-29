@@ -123,26 +123,41 @@ color:#FFFFFF;
 
 .btn5
 {
-height:45px;
-width:210px;
-background-color:white;
-color:black;
-font-size:20px;
-border:1px solid white;
-text-align:left;
-font-family:Gabriola;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: white;
+  border: none;
+  text-align: center;
+  font-size: 20px;
+  padding: 2%;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: gurmukhi sangam mn;
 }
 
-.btn5:hover
-{
-
-background-color:#2492FF;
-color:#FFFFFF;
+.btn5:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
-.btn5:focus
-{
+.btn5:hover span {
+  padding-right: 25px;
+}
 
-background-color:#2492FF;
-color:#FFFFFF;
+.btn5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }

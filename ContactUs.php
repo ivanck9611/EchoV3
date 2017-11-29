@@ -5,7 +5,6 @@
 <link rel = "stylesheet" type = "text/css" href = "mystyle.css">
 </head>
 <body>
-
 <h1 class = "f">Contact Us</h1>
 <hr>
 

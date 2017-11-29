@@ -8,24 +8,30 @@
 
 <body>
 
-<table width="250"  border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
+<table width=25%  border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
                 <tr>
                     <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Collection</td>
                 </tr>
 				  <tr>
-                    <td><a href = "Formal shirts.php" target = "myframe"><button class = "btn5">Router</button> </a></td>
+                    <td><a href = "Router.php" target = "myframe"><button class = "btn5" style="vertical-align:middle"><span>Router</span></button> </a></td>
                   </tr>
-                  <tr>
-                    <td><a href = "Slogan T-shirts.php" target = "myframe"><button class = "btn5">Slogan T-shirts</button> </a></td>
-                  </tr>
-				  <tr>
-                    <td><a href = "V-neck T-shirts.php" target = "myframe"><button class = "btn5">V-neck T-shirts</button> </a></td>
+          <tr>
+                    <td><a href = "Headphone.php" target = "myframe"><button class = "btn5"><span>Headphone</span></button> </a></td>
                   </tr>
 				  <tr>
-                    <td><a href = "Round neck T-shirts.php" target = "myframe"><button class = "btn5">Round neck T-shirts</button> </a></td>
+                    <td><a href = "Hi-Fi.php" target = "myframe"><button class = "btn5"><span>Hi-Fi</span></button> </a></td>
                   </tr>
 				  <tr>
-                    <td><a href = "Full sleeve Tees.php" target = "myframe"><button class = "btn5">Full sleeve Tees</button> </a></td>
+                    <td><a href = "Speaker.php" target = "myframe"><button class = "btn5"><span>Speaker</span></button> </a></td>
+                  </tr>
+				  <tr>
+                    <td><a href = "Protable speaker.php" target = "myframe"><button class = "btn5"><span>Protable speaker</span></button> </a></td>
+                  </tr>
+          <tr>
+                    <td><a href = "Keyboard.php" target = "myframe"><button class = "btn5"><span>Keyboard</span></button> </a></td>
+                  </tr>
+          <tr>
+                    <td><a href = "Mouse.php" target = "myframe"><button class = "btn5"><span>Mouse</span></button> </a></td>
                   </tr>
 
 
@@ -33,7 +39,7 @@
 
             </tr>
             <tr>
-              <td><table width="250" border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
+              <td><table width="25%" border="1" cellpadding="5" cellspacing="10" bordercolor="#B9B9B9" class="t3">
 
                 <tr>
                     <td align="center" style="background-color:#aaaaaa; color:#FFFFFF;">Woman's Corner</td>
