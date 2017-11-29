@@ -6,30 +6,65 @@ h6
 }
 
 
-.btn
+div.container
 {
-  background-color: #333;
-  color: white;
-  width:100%;
-  height: 100%;
-  border: none;
-  cursor: pointer;
-  font-size: 20px;
-  border:0px solid white;
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 2em 2em;
+	text-align: center;
 }
 
-.btn:hover
+div.container a
 {
-  background-color: #111;
-  float: right;
+    color: #555;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
 }
 
-.btn:focus
+
+
+
+div.pullDown a:before
 {
-background-color:white;
-color:black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    top: 0px;
+    content: '';
+    background: #999;
+    opacity: 0.3;
+    transition: all 0.3s;
 }
 
+div.pullDown a:hover:before
+{
+    height: 100%;
+}
+
+/* Pull up  */
+div.pullUp a:before
+{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0px;
+    bottom: 0px;
+    content: '';
+    background: #FFF;
+    opacity: 0.3;
+    transition: all 0.3s;
+}
+
+div.pullUp a:hover:before
+{
+    height: 100%;
+}
 
 .btn2
 {
