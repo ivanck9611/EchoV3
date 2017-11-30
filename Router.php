@@ -12,7 +12,7 @@ $result = mysqli_query($db,"SELECT * FROM router");
 
 echo "<p class = 'f'> ROUTER</p>";
 
-echo "<table class=hovertable'> <tr>";
+echo "<table cellspacing = 5 cellpadding = 5 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
 
 $c = 0;
 
@@ -24,7 +24,7 @@ $c++;
 echo "<td class=tdproduct>
 <a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img class=show src ='".$row['path']."' height = 245 width = 245>
 </a><br><br>
-<span class=price style = 'font-family:Rupee Foradian' >Product Name: </span>".$row['name'];
+<span class=price style = 'font-family:Rupee Foradian' ></span>".$row['name'];
 echo "<br><span class=price style = 'font-family:Rupee Foradian' >HKD$</span>".$row['price'];
 echo "<td></td>";
 if($c == 3)
