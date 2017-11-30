@@ -44,18 +44,20 @@ font-family:sans-serif;
 #loginscreen
 {
 
-height:100px;
-width:240px;
-top:5px;
+height:200px;
+width:450px;
+top:50px;
 z-index:1;
 position:fixed;
-left:1105;
+left:1450;
 display:none;
 background-color:white;
 }
+
+
 #signupscreen:target, #signupscreen:target + #cover{ display:block; opacity:0.9; }
 
-#loginscreen:target,#loginscreen:target + #cover{ display:block; opacity:2; }
+#loginscreen:target,#loginscreen:target + #cover{ display:block; opacity:0.9; }
 
 
 .cancel
@@ -81,6 +83,8 @@ text-align:center;
 
 .hi{
   text-decoration: none;
+  color: white;
+  font-family: gurmukhi sangam mn;
 }
 
 </style>

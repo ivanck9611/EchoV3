@@ -9,9 +9,10 @@ body {font-family: Verdana,sans-serif;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 80%;
   position: absolute;
   margin: auto;
+  text-align: center;
 }
 
 /* Caption text */
@@ -57,6 +58,9 @@ body {font-family: Verdana,sans-serif;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
+p{
+  font-size: 20px;
+}
 
 @-webkit-keyframes fade {
   from {opacity: .4}
@@ -76,7 +80,7 @@ body {font-family: Verdana,sans-serif;}
 </head>
 <body>
 
-<p style="font-size=30px;">Welcome to Echo</h2>
+<p>TOP NEWS</p>
 
 
 <div class="slideshow-container">
