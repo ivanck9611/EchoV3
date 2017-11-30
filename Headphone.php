@@ -12,7 +12,7 @@ $result = mysqli_query($db,"SELECT * FROM headphone");
 
 echo "<p class = 'f'> HEADPHONE</p>";
 
-echo "<table cellspacing = 10 cellpadding = 10 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
+echo "<table cellspacing = 5 cellpadding = 5 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
 
 $c = 0;
 
@@ -21,11 +21,12 @@ while($row = mysqli_fetch_array($result))
 {
 $c++;
 
-echo "<td class = 'imgbg'>
+echo "<td class=tdproduct>
 <a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['path']."' height = 245 width = 245> </a
-><br>
-<span style = 'font-family:Rupee Foradian'>$ </span>".$row['price'];
-
+><br><br>
+<span class=price style = 'font-family:Rupee Foradian' ></span>".$row['name'];
+echo "<br><span class=price style = 'font-family:Rupee Foradian' >HKD$</span>".$row['price'];
+echo "<td></td>";
 if($c == 3)
 {
 echo "<tr>";
