@@ -2,14 +2,14 @@
 
 session_start();
 
-if(isset($_SESSION['Admin'])) 
+if(isset($_SESSION['Admin']))
 {
 
 ?>
 
 <! DOCTYPE HTML>
 <head>
-<title>FashioMode.com</title>
+<title>Echo.com</title>
 </head>
 <body>
 <?php include 'Header3.php';?>

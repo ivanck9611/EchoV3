@@ -3,9 +3,47 @@
 <title>My Profile</title>
 <link href="menu.css" rel="stylesheet" type="text/css"/>
 <link href="mystyle.css" rel="stylesheet" type="text/css"/>
+<link rel = "stylesheet" type = "text/css" href = "menu.css">
+<link rel = "stylesheet" type = "text/css" href = "Styles/contactus.css">
+<link rel = "stylesheet" type = "text/css" href = "mystyle.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="validation3.js"></script>
 </head>
+<style>
+body {margin:10;}
+
+.icon-bar {
+    width: 100%;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: black;
+    font-size: 20px;
+}
+
+.icon-bar a:hover {
+    background-color: #666666;
+}
+
+.active {
+    background-color: #999999 !important;
+}
+</style>
+
 <body>
+  <p class = 'f'> My Profile</p>
+  <div class="icon-bar">
+    <a href="Myprofile.php" target = "myframe"><i class="fa fa-address-book-o"><br>My Profile</i></a>
+    <a href="Changepassword.php" target = "myframe"><i class="fa fa-unlock-alt"><br>Change Password</i></a>
+    <a href="MyOrder.php" target = "myframe"><i class="fa fa-edit"><br>My Order</i></a>
+  </div>
+
 <?php
 
 session_start();
@@ -34,42 +72,38 @@ $row = mysqli_fetch_row($result);
 
 <h1 align = center class = "f">My Profile </h1>
 <hr>
-<form name = "myprofile" method = "post" action = "updateProfile.php" onsubmit = "return validation3()">
+<form id="contact" action="" method="post">
 
-<table width="400" style="font-family:Futura Lt BT; font-weight:400;" cellspacing="8" cellpadding="10" align = "center">
-  <tr>
+  <fieldset>
+    First Name:
+    <br>
+    <input name="firstname" placeholder="<?php echo $row[1] ?>" type="text" tabindex="1" required autofocus>
+  </fieldset>
+  <fieldset>
+    Last Name:
+    <br>
+    <input name="lastname" placeholder="<?php echo $row[2] ?>" type="text" tabindex="1" required autofocus>
+  </fieldset>
+  <fieldset>
+    Gender:
+    <br>
+    <input name="gender" placeholder="<?php echo $row[3] ?>" type="text" tabindex="1" required autofocus>
+  </fieldset>
+  <fieldset>
+    Contact no:
+    <br>
+    <input name="contactno" placeholder="<?php echo $row[4] ?>" type="text" tabindex="1" required autofocus>
+  </fieldset>
+  <fieldset>
+    <button name="send" type="submit" id="contact-submit" data-submit="...Sending">Save Changes</button>
+  </fieldset>
 
-    <td> First Name  </td>
-    <td><input type="text" name = "f" value = "<?php echo $row[1] ?>" name="fname" class="in3" placeholder = "First name"  size="20" onblur = "alpha2()"/></td>
-  </tr>
-  <tr>
-    <td> Last Name</td>
-    <td><input type="text" name = "l" value = "<?php echo $row[2] ?>" name="lname" class = "in3" placeholder = "Last name"size="20" onblur = "alphabetic2()" /></td>
-  </tr>
-    <tr>
-    <td> Gender </td>
-    <td> <input type="text" name="g" value = "<?php echo $row[3] ?>" class = "in3" placeholder="Gender" readonly/></td>
-  </tr>
-
-  <tr> 
-    <td>Contact no</td>
-    <td><input type="text"  name = "c" value = "<?php echo $row[4] ?>" name="contact" class = "in3" size="20" maxlength = 10 placeholder = "Contact no" onblur = "num2()"/></td>
-  </tr>
-  
-  <tr>
-    <td>&nbsp;</td>
-    <td><input type="submit" name = "submit" class = "Addtocart" value = "Save changes"/> </td>
-  
-
-</tr>
-</table>
 </form>
-</div>
 <?php
 }
 
 
 ?>
 
-</body> 
+</body>
 </html>

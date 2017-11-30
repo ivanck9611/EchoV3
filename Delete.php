@@ -29,7 +29,7 @@ $pri = $_POST['price'];
 
 	}
 }
-	else if($c == 'speaker')
+	elseif($c == 'speaker')
 	{
 
 		$query = "SELECT Imagepath from woman where Product_id = '$p'";
