@@ -3,8 +3,11 @@
 <head>
 <title> About us </title>
 <link rel = "stylesheet" type = "text/css" href = "mystyle.css">
+<style>
+
+</style>
 </head>
-<body>
+<body height=auto>
 
 <h1 class = "f"> CATEGORY </h1>
 <hr>

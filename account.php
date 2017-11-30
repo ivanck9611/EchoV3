@@ -1,20 +1,3 @@
-<!-- CSS goes in the document HEAD or added to your external stylesheet -->
-<a href="Myprofile.php" target = "myframe">My Profile</a>
-<a href="Changepassword.php" target = "myframe">Change Password</a>
-<a href="MyOrder.php" target = "myframe">My Order</a>
-<a href="index.php?logout">Logout</a>
-
-
-<a href = "Myprofile.php" target = "myframe"><img class="account"  src = "img/myprofile.png"></a>
-<a href = "Changepassword.php" target = "myframe"><img class="account"  src = "img/changepassword.png"></a>
-<a href = "MyOrder.php" target = "myframe"><img class="account"  src = "img/myorder.png"></a>
-
-
-
-
-
-
-<!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
