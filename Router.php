@@ -21,12 +21,12 @@ while($row = mysqli_fetch_array($result))
 {
 $c++;
 
-echo "<td class=tdproduct onmouseover=this.style.backgroundColor='#D8D8D8' onmouseout=this.style.backgroundColor='#fff'>
+echo "<td class=tdproduct>
 <a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img class=show src ='".$row['path']."' height = 245 width = 245>
 </a><br><br>
 <span class=price style = 'font-family:Rupee Foradian' >Product Name: </span>".$row['name'];
 echo "<br><span class=price style = 'font-family:Rupee Foradian' >HKD$</span>".$row['price'];
-
+echo "<td></td>";
 if($c == 3)
 {
 echo "<tr>";

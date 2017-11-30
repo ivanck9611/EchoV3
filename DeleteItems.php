@@ -66,9 +66,9 @@ if($m == 'router')
 	$result = mysqli_query($db,"SELECT * FROM router where category = '$m'");
 }
 
-else
+elseif($m == 'headphone')
 {
-	$result = mysqli_query($db,"SELECT * FROM woman where ProductType = '$m'");
+	$result = mysqli_query($db,"SELECT * FROM headphone where category = '$m'");
 }
 
 echo "<form action = 'Delete.php' method = 'post'>";

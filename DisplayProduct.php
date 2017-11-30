@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<h2 class = "f"> Product Details </h2>
+<h2 class = "f" font-family: "gurmukhi sangam mn";> Product Details </h2>
 <hr>
 <?php
 //p=category p2=id p3=name
@@ -70,15 +70,12 @@ $r = mysqli_query($db, $query2) or die("There is no Data");
 while($row5 = mysqli_fetch_row($r))
 {
 
-
 echo "<form action = 'Cart.php?' method = 'post'>";
-
-echo "<table width='1000' height= 318 border= 0 cellpadding= 0 cellspacing = 5 align = center style = 'padding:5px; background-color:white; font-family:Futura Lt BT; font-weight:400; font-size:15px;'> <tr>";
-
+echo "<table width='1000' height= 318 border= 0 cellpadding= 0 cellspacing = 5 align = center style = 'padding:5px; background-color:white; font-family:Futura Lt BT; font-weight:400; font-size:18px;'> <tr>";
 echo " <td align = center rowspan= 7><img src ='".$row5[5]."' class = 'imgbg' height = 245 width = 245><br></td>";
 echo " <td>Product Id :<td> <input type = 'text' class = 'in7' name = 'id' value = '".$row5[0]."' readonly> </td>";
 echo "</tr> <tr>";
-echo " <td>Product Name <td><input type = 'text' name = 'pn' class = 'in7' value = '".$row5[2]."' size = 40 readonly> </td>";
+echo " <td>Product Name: <td><input type = 'text' name = 'pn' class = 'in7' value = '".$row5[2]."' size = 40 readonly> </td>";
 echo "</tr> <tr>";
 echo " <td>Brand <td> <input type = 'text' name = 'b' class = 'in7' value = '".$row5[3]."' readonly> </td>";
 echo "</tr> <tr>";

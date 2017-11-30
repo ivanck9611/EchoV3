@@ -43,6 +43,7 @@ body {font-family: Verdana,sans-serif;}
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+  display:none;
 }
 
 .active {
@@ -75,24 +76,24 @@ body {font-family: Verdana,sans-serif;}
 </head>
 <body>
 
-<h2>Today's News</h2>
+<p style="font-size=30px;">Welcome to Echo</h2>
 
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img/img1.png" style="width:100%">
+  <div class="numbertext"></div>
+  <img src="img/Echo.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img/img2.jpg" style="width:100%">
+  <div class="numbertext"></div>
+  <img src="img/shownow.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img/img3.png" style="width:120%">
+  <div class="numbertext"></div>
+  <img src="img/monthlycollection.png" style="width:100%">
 </div>
 
 </div>
@@ -122,7 +123,7 @@ function showSlides() {
     }
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(showSlides, 3000); // Change image every 2 seconds
 }
 </script>
 
