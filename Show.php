@@ -9,7 +9,7 @@ body {font-family: Verdana,sans-serif;}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 80%;
+  max-width: 100%;
   position: absolute;
   margin: auto;
   text-align: center;

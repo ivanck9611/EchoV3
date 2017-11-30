@@ -44,12 +44,11 @@ font-family:sans-serif;
 #loginscreen
 {
 
-height:200px;
-width:450px;
-top:50px;
-z-index:1;
+height:auto;
+width:auto;
+top:5px;
+left:900px;
 position:fixed;
-left:1450;
 display:none;
 background-color:white;
 }
