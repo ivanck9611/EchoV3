@@ -2,36 +2,12 @@ h6
 {
 
 }
-table.hovertable {
-	font-family: verdana,arial,sans-serif;
-	font-size:11px;
-	color:#333333;
-	border-width: 1px;
-	border-color: #fff;
-	border-collapse: collapse;
-}
-table.hovertable th {
-	background-color:#fff;
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #a9c6c9;
-}
-table.hovertable tr {
-	background-color:#fff;
-}
-table.hovertable td {
-	border-width: 1px;
-	padding: 8px;
-	border-style: solid;
-	border-color: #a9c6c9;
-}
 
 .imgbg
 {
 padding:5px;
-background-color:#e8e9e7;
-border:2px solid #c9c9c8;
+height: 450px;
+width: 450px;
 text-align:center;
 border-top:20px
 
@@ -53,8 +29,7 @@ width: 964px;
   height:300px;
   width: 300px;
   text-align: center;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  padding=10px;
+	padding=10px;
 }
 .show{
   border:5px;
