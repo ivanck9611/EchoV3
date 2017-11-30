@@ -3,8 +3,8 @@
 
 <div class="left footertext">
      <a href="index.php">Home</a>
-     <a href="index.php">Shop Collection</a>
-     <a href="index.php">Our Story</a>
+     <a href="AboutUs.html">About Us</a>
+     <a href="ContactUs.php">Contact Us</a>
 
 </div>
 

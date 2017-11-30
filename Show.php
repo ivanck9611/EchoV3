@@ -75,14 +75,14 @@ body {font-family: Verdana,sans-serif;}
 </head>
 <body>
 
-<h2>Automatic Slideshow</h2>
-<p>Change image every 2 seconds:</p>
+<h2>Today's News</h2>
+
 
 <div class="slideshow-container">
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="/img/MVP.png" style="width:100%">  
+  <img src="img/img1.png" style="width:100%">
 </div>
 
 <div class="mySlides fade">
@@ -92,7 +92,7 @@ body {font-family: Verdana,sans-serif;}
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="img/img3.jpg" style="width:100%">
+  <img src="img/img3.png" style="width:120%">
 </div>
 
 </div>

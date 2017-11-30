@@ -50,6 +50,22 @@ $query2 = "select * from mouse where id = '$string2'";
 $r = mysqli_query($db, $query2) or die("There is no Data");
 
 }
+elseif($string == 'HiFi')
+{
+
+$query2 = "select * from hifi where id = '$string2'";
+
+$r = mysqli_query($db, $query2) or die("There is no Data");
+
+}
+elseif($string == 'keyboard')
+{
+
+$query2 = "select * from keyboard where id = '$string2'";
+
+$r = mysqli_query($db, $query2) or die("There is no Data");
+
+}
 
 while($row5 = mysqli_fetch_row($r))
 {

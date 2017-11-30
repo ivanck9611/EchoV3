@@ -10,8 +10,8 @@
 </br>
 <hr>
   <form id="contact" action="" method="post">
-    <h3>Send us a message</h3>
-    <h4>Contact us for custom quote</h4>
+    <h3>Leave us a message</h3>
+    <h4>Contact us for improving our service</h4>
     <fieldset>
       <input name="name" placeholder="Your name" type="text" tabindex="1" required autofocus>
     </fieldset>
