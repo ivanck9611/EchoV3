@@ -38,19 +38,6 @@ else
         <option> keyboard</option>
       </optgroup>
     </select> </td>
-	<td>Brand : </td>
-	<td>
-	<select name="brands" required>
-      <option value = ""> ------------------------Select------------------------</option>
-	 <option value = "None">None</option>
-	  <optgroup name = "Man's Brand" label = "Man's Brand">
-	<option> ASUS </option>
-	<option>Turtle </option>
-	<option>Tom Hatton </option>
-	<option>Peter England </option>
-	<option>LondonBridge </option>
-	<option>Lotto </option>
-	</td>
   <div style = "visibility:hidden;"><input type = "text" name = "lable" id = "path"></div>	<td><input name="submit" type = "submit"  name = "submit" value = "Display" class="d"> </td>
   </tr>
   </table>
@@ -74,16 +61,14 @@ if(isset($_POST['submit']))
 
 $m = $_POST['menu1'];
 
-$b = $_POST['brands'];
-
 if($m == 'router')
 {
-	$result = mysqli_query($db,"SELECT * FROM router where category = '$m' and brand = '$b'");
+	$result = mysqli_query($db,"SELECT * FROM router where category = '$m'");
 }
 
 else
 {
-	$result = mysqli_query($db,"SELECT * FROM woman where ProductType = '$m' and Brand = '$b'");
+	$result = mysqli_query($db,"SELECT * FROM woman where ProductType = '$m'");
 }
 
 echo "<form action = 'Delete.php' method = 'post'>";
@@ -95,7 +80,6 @@ echo "<td> <strong> &nbsp; </td>";
 echo "<td> <strong> Product Id </td> ";
 echo "<td> <strong>Product Image </td>";
 echo "<td> <strong>Product Brand </td>";
-echo "<td> <strong>Description </td>";
 echo "<td> <strong>Price </td><tr>";
 
 while($row = mysqli_fetch_array($result))
