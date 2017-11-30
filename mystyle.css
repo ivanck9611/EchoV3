@@ -3,6 +3,30 @@ h6
 {
 
 }
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #fff;
+	border-collapse: collapse;
+}
+table.hovertable th {
+	background-color:#fff;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
+table.hovertable tr {
+	background-color:#fff;
+}
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}
 
 .imgbg
 {
@@ -17,4 +41,25 @@ text-align:center;
 font-family: gurmukhi sangam mn;
 font-size: 30px;
 padding-top: 7px;
+width: 964px;
+}
+
+.categorybanner{
+  height:100%;
+  width: 964px;
+}
+
+.tdproduct{
+  height:300px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  padding=10px;
+}
+.show{
+  border:5px;
+}
+
+.price{
+  text-align: center;
 }

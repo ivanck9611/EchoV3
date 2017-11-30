@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <head>
-<title>FashioMode.com</title>
+<title>Echo.com</title>
 <style type="text/css">
 <style>
 
@@ -108,7 +108,7 @@ text-align:center;
 
   <div class="container lightGreen pullDown">
     <a href="index.php">HOME</a>
-    <a href="contactus.php" target="myframe">CATEGORY</a>
+    <a href="Category.php" target="myframe">CATEGORY</a>
     <a href="AboutUs.html" target="myframe">ABOUT US</a>
     <a href="contactus.php" target="myframe">CONTACT US</a>
     <a href="Cart.php" target="myframe">CART</a>

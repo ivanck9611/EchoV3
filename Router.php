@@ -12,7 +12,7 @@ $result = mysqli_query($db,"SELECT * FROM router");
 
 echo "<p class = 'f'> ROUTER</p>";
 
-echo "<table cellspacing = 10 cellpadding = 10 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
+echo "<table class=hovertable'> <tr>";
 
 $c = 0;
 
@@ -21,10 +21,11 @@ while($row = mysqli_fetch_array($result))
 {
 $c++;
 
-echo "<td class = 'imgbg'>
-<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['path']."' height = 245 width = 245> </a
-><br>
-<span style = 'font-family:Rupee Foradian'>$ </span>".$row['price'];
+echo "<td class=tdproduct onmouseover=this.style.backgroundColor='#D8D8D8' onmouseout=this.style.backgroundColor='#fff'>
+<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img class=show src ='".$row['path']."' height = 245 width = 245>
+</a><br><br>
+<span class=price style = 'font-family:Rupee Foradian' >Product Name: </span>".$row['name'];
+echo "<br><span class=price style = 'font-family:Rupee Foradian' >HKD$</span>".$row['price'];
 
 if($c == 3)
 {

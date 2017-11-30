@@ -1,76 +1,46 @@
-<div class="container lightGreen pullDown">
-  <a href="index.php" target="myframe">HOME</a>
-  <a>ARTICLES</a>
-  <a>PORTFOLIO</a>
-  <a>ABOUT</a>
-  <a href="contactus.php" target="myframe">CONTACT</a>
-</div>
-
-<style>
-
-.lightGreen
-{
-    background: #999;
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #fff;
+	border-collapse: collapse;
 }
-
-
-div.container
-{
-    font-family: Raleway;
-    margin: 0 auto;
-	padding: 3em 1em;
-	text-align: center;
+table.hovertable th {
+	background-color:#fff;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
 }
-
-div.container a
-{
-    color: #FFF;
-    text-decoration: none;
-    font: 20px Raleway;
-    margin: 0px 10px;
-    padding: 10px 10px;
-    position: relative;
-    z-index: 0;
-    cursor: pointer;
+table.hovertable tr {
+	background-color:#fff;
 }
-
-
-
-
-div.pullDown a:before
-{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0px;
-    top: 0px;
-    content: '';
-    background: #FFF;
-    opacity: 0.3;
-    transition: all 0.3s;
-}
-
-div.pullDown a:hover:before
-{
-    height: 100%;
-}
-
-/* Pull up  */
-div.pullUp a:before
-{
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0px;
-    bottom: 0px;
-    content: '';
-    background: #FFF;
-    opacity: 0.3;
-    transition: all 0.3s;
-}
-
-div.pullUp a:hover:before
-{
-    height: 100%;
+table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
 }
 </style>
+<!-- Table goes in the document BODY -->
+<table class="hovertable">
+
+<tr onmouseover="this.style.backgroundColor='#D8D8D8';" onmouseout="this.style.backgroundColor='#fff';">
+	<td>Item 1A</td><td>Item 1B</td><td>Item 1C</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#D8D8D8';" onmouseout="this.style.backgroundColor='#fff';">
+	<td>Item 2A</td><td>Item 2B</td><td>Item 2C</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#D8D8D8';" onmouseout="this.style.backgroundColor='#fff';">
+	<td>Item 3A</td><td>Item 3B</td><td>Item 3C</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#D8D8D8';" onmouseout="this.style.backgroundColor='#ffff';">
+	<td>Item 4A</td><td>Item 4B</td><td>Item 4C</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#fff';">
+	<td>Item 5A</td><td>Item 5B</td><td>Item 5C</td>
+</tr>
+</table>
