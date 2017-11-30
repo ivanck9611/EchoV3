@@ -66,7 +66,7 @@ $query2 = "select * from keyboard where id = '$string2'";
 $r = mysqli_query($db, $query2) or die("There is no Data");
 
 }
-elseif($string == 'portablespeaker')
+elseif($string == 'PortableSpeaker')
 {
 
 $query2 = "select * from portablespeaker where id = '$string2'";

@@ -79,6 +79,10 @@ text-align:center;
 
 }
 
+.hi{
+  text-decoration: none;
+}
+
 </style>
 <link rel = "stylesheet" type = "text/css" href = "menu.css">
 <link rel = "stylesheet" type = "text/css" href = "dropdownmenu.css">
@@ -88,9 +92,9 @@ text-align:center;
   <table align= "right">
   <tr>
 
-    <td><a href="#loginscreen">Login </a>&nbsp;|
+    <td class="LOGINbtn"><a class ="hi" href="#loginscreen">Login </a>&nbsp;|
 	<td>
-    <a href="#signupscreen">&nbsp;&nbsp;Sign up </a></td>
+    <a class ="hi" href="#signupscreen">&nbsp;&nbsp;Sign up </a></td>
 	<tr>
 	<td>  <div id = "loginscreen"> <a href="#" class="cancel">&times;</a>
 		<?php include 'Login.php'; ?>
