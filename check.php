@@ -39,10 +39,6 @@ $add = $_POST['Address'];
 
 $cont = $_POST['select'];
 
-$s = $_POST['select2'];
-
-$city = $_POST['select3'];
-
 $z = $_POST['zcode'];
 
 $cn = $_POST['stel2'];
