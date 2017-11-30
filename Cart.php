@@ -144,15 +144,15 @@ $_SESSION['cart'] = array();
 
 echo "<div class=tbl-content>";
 
-echo "<table  cellpadding=0 cellspacing=0 border=0> <tr align = center  style = 'background-color:#e8e9e7;'>";
+echo "<table  cellpadding=0 cellspacing=0 border=0> <tr align = center  style = 'background-color:#e8e9e7; font-size:15px;'>";
 
 echo "<thead><tr>
-				<th>Product ID</th>
-				<th>Image</th>
-				<th>Price</th>
-				<th>Quantity</th>
-				<th>Sub total</th>
-				<th>Action</th>
+				<th style='font-size:12px;'>Product ID</th>
+				<th style='font-size:12px;>Image</th>
+				<th style='font-size:12px;>Price</th>
+				<th style='font-size:12px;>Quantity</th>
+				<th style='font-size:12px;>Sub total</th>
+				<th style='font-size:12px;>Action</th>
 			</tr></thead></div>";
 
 $tp2 = 0;

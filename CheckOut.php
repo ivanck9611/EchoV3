@@ -127,84 +127,22 @@ $_SESSION['cart'] = array();
         <tr>
           <td> Country </td>
           <td><select name="select"  class="in11" tabindex="5">
+      <option value="HongKong" selected>Hong Kong</option>
+      		<option value="TaiWan" selected>Tai Wan</option>
+      		<option value="Japan" selected>Japan</option>
+          		<option value="Korean" selected>Korean</option>
 			<option value="africa">Africa</option>
 			<option value="asia">Asia</option>
 		<option value="australia">Australia/Pacific</option>
 		<option value="europe">Europe</option>
 		<option value="noamer">North America</option>
 		<option value="soamer">South America</option>
-		<option value="India" selected>India</option>
+
                       </select>          </td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
-        <tr>
-          <td> State </td>
-          <td><select name="select2" class="in11" tabindex="6">
 
-
-<option>Arunachal Pradesh
-<option>Andhra Pradesh
-<option>Bihar
-<option>Bhutan
-<option>Bangladesh
-<option>Chhattisgarh
-<option>Jammu & kashmir
-<option>Himachal pradesh
-<option>Punjab
-<option>Rajstan
-<option selected>Gujarat
-<option>Madhya pradesh
-<option>Uttar Pradesh
-<option>Maharashtra
-<option>Telangana
-<option>Karnataka
-<option>Tamil nadu
-<option>Orissa
-<option>Kerala
-<option>uttarkhand
-<option>Nepal
-<option>Jharkhand
-<option>West Bengal
-<option>Tripura
-<option>Myanmar
-<option>Assam(Asom)
-<option>Nagaland
-<option>Himachal Pradesh
-<option>Goa
-                      </select>          </td>
-          <td>&nbsp;</td>
-          <td>&nbsp;</td>
-        </tr>
-        <tr>
-          <td> City </td>
-          <td><select name="select3" class="in11" tabindex="7">
-            <option>Ahemdabad
-<option>Anand
-<option>Ahwa
-<option>Amreli
-<option>Bharuch
-<option>Bhavnagar
-<option>Bhuj
-<option>Dahod
-<option>Godhra
-<option>Himantnagar
-<option>Jaunagadh
-<option>Jamnagar
-<option>Mahesana
-<option>Navsari
-<option>Nadiad
-<option>Porbandar
-<option>Palanpur
-<option>Patan
-<option>Rajpipla
-<option>Surendranagar
-<option>Sabarkantha
-<option>Surat
-<option>Valsad
-<option>Vyara
-<option selected>Vadodara
-                      </select>          </td>
           <td>&nbsp;</td>
           <td>&nbsp;</td>
         </tr>
@@ -283,7 +221,7 @@ foreach ($_SESSION["cart"] as $item)
 else
 
 {
-	echo "<h2 style = 'color:red;'> Please Login First or Sign up Now......</h2>";
+	echo "<h2 style = 'color:red;'> Please Login First or Sign up Now</h2>";
 
 }
 
