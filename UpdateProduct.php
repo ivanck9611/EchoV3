@@ -28,29 +28,17 @@ else
 	<td>Product Type :</td>
     <td><select name="menu1" required>
       <option value = ""> ------------------------Select------------------------</option>
-      <optgroup name = "menclothes" label = "Men's Clothes">
+      <optgroup name = "Category" label = "Category">
         <option> router</option>
         <option> speaker</option>
-        <option> hi-fi</option>
+        <option> hifi</option>
         <option> portable speaker</option>
         <option> headphone</option>
         <option> mouse</option>
         <option> keyboard</option>
       </optgroup>
     </select> </td>
-	<td>Brand : </td>
-	<td>
-	<select name="brands" required>
-      <option value = ""> ------------------------Select------------------------</option>
-	 <option value = "None">None</option>
-	  <optgroup name = "Man's Brand" label = "Man's Brand">
-	<option> ASUS </option>
-	<option>Turtle </option>
-	<option>Tom Hatton </option>
-	<option>Peter England </option>
-	<option>LondonBridge </option>
-	<option>Lotto </option>
-	</td>
+
 	<td><input name="submit" type = "submit"  name = "submit" value = "Display" class="d"> </td>
   </tr>
   </table>
@@ -73,18 +61,35 @@ if(isset($_POST['submit']))
 
 $m = $_POST['menu1'];
 
-$b = $_POST['brands'];
-
 if($m == 'router')
 {
-	$result = mysqli_query($db,"SELECT * FROM router where category = '$m' and Brand = '$b'");
+	$result = mysqli_query($db,"SELECT * FROM router where category = '$m'");
 }
 
-else
+elseif($m == 'headphone')
 {
-	$result = mysqli_query($db,"SELECT * FROM woman where ProductType = '$m' and Brand = '$b'");
+	$result = mysqli_query($db,"SELECT * FROM headphone where  Category = '$m'  ");
 }
-
+elseif($m == 'speaker')
+{
+	$result = mysqli_query($db,"SELECT * FROM speaker where  Category = '$m'  ");
+}
+elseif($m == 'portablespeaker')
+{
+	$result = mysqli_query($db,"SELECT * FROM portablespeaker where  Category = '$m'  ");
+}
+elseif($m == 'keyboard')
+{
+	$result = mysqli_query($db,"SELECT * FROM keyboard where  Category = '$m'  ");
+}
+elseif($m == 'mouse')
+{
+	$result = mysqli_query($db,"SELECT * FROM mouse where  Category = '$m'  ");
+}
+elseif($m == 'hifi')
+{
+	$result = mysqli_query($db,"SELECT * FROM hifi where  Category = '$m'  ");
+}
 
 
 echo "<table cellspacing = 20 cellpadding = 5> <tr align = center>";

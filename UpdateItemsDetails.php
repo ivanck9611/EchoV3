@@ -25,10 +25,42 @@ $query = "select * from router where id = '$pid'";
 $r = mysqli_query($db,$query) or die("There is no Data");
 
 }
-else
+elseif($c == 'headphone')
 {
 
-$query2 = "select * from woman where Product_id = '$pid'";
+$query2 = "select * from headphone where id = '$pid'";
+
+$r = mysqli_query($db,$query2) or die("There is no Data");
+
+}
+elseif($c == 'keyboard')
+{
+
+$query2 = "select * from keyboard where id = '$pid'";
+
+$r = mysqli_query($db,$query2) or die("There is no Data");
+
+}
+elseif($c == 'hifi')
+{
+
+$query2 = "select * from hifi where id = '$pid'";
+
+$r = mysqli_query($db,$query2) or die("There is no Data");
+
+}
+elseif($c == 'speaker')
+{
+
+$query2 = "select * from speaker where id = '$pid'";
+
+$r = mysqli_query($db,$query2) or die("There is no Data");
+
+}
+elseif($c == 'portablespeaker')
+{
+
+$query2 = "select * from portablespeaker where id = '$pid'";
 
 $r = mysqli_query($db,$query2) or die("There is no Data");
 
