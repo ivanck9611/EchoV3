@@ -28,8 +28,8 @@ body {margin:10;}
 }
 </style>
 <body>
-
-<div class="icon-bar">
+<p class = 'f' style="text-align:center font-size: 30px;">My Profile</p>
+<div class="icon-bar" style="text-align:center;margin-left: 25%;">
   <a href="Myprofile.php" target = "myframe"><i class="fa fa-address-book-o"><br>My Profile</i></a>
   <a href="Changepassword.php" target = "myframe"><i class="fa fa-unlock-alt"><br>Change Password</i></a>
   <a href="MyOrder.php" target = "myframe"><i class="fa fa-edit"><br>My Order</i></a>

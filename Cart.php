@@ -8,10 +8,10 @@ table{
   table-layout: fixed;
 }
 .tbl-header{
-  background-color: rgba(255,255,255,0.6667);
+  background-color: rgba(255,255,255,0.3);
  }
 .tbl-content{
-  height:100%;
+  height:300px;
   overflow-x:auto;
   margin-top: 0px;
   border: 1px solid rgba(255,255,255,0.3);
@@ -21,7 +21,7 @@ th{
   text-align: left;
   font-weight: 500;
   font-size: 12px;
-  color: #000;
+  color: #505050;
   text-transform: uppercase;
 }
 td{
@@ -30,34 +30,11 @@ td{
   vertical-align:middle;
   font-weight: 300;
   font-size: 12px;
-  color: #000;
+  color: #505050;
   border-bottom: solid 1px rgba(255,255,255,0.1);
 }
 
-
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
-body{
-  background: -webkit-linear-gradient(left, #555, #444);
-  background: linear-gradient(to right, #fff, #fff);
-  font-family: 'Roboto', sans-serif;
-	width:100%;
-}
-section{
-  margin: 50px;
-}
-
-/* for custom scrollbar for webkit browser*/
-
-::-webkit-scrollbar {
-    width: 6px;
-}
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
-::-webkit-scrollbar-thumb {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-}
 </style>
 
 </style>
@@ -111,7 +88,7 @@ $_SESSION['cart'] = array();
 
 			elseif(empty($_SESSION['cart']))
 			{
-				echo "<h2>There is No Items in Your Cart...........</h2>";
+				echo "<h2>There is No Items in Your Cart.</h2>";
 			}
 
 
@@ -145,15 +122,16 @@ $_SESSION['cart'] = array();
 echo "<div class=tbl-content>";
 
 echo "<table  cellpadding=0 cellspacing=0 border=0> <tr align = center  style = 'background-color:#e8e9e7; font-size:15px;'>";
-
 echo "<thead><tr>
-				<th style='font-size:12px;'>Product ID</th>
-				<th style='font-size:12px;>Image</th>
-				<th style='font-size:12px;>Price</th>
-				<th style='font-size:12px;>Quantity</th>
-				<th style='font-size:12px;>Sub total</th>
-				<th style='font-size:12px;>Action</th>
-			</tr></thead></div>";
+				<th style='font-size:12px;width: 100px;'>Product ID</th>
+				<th style='font-size:12px;width: 100px;'>Image</th>
+				<th style='font-size:12px;width: 100px;'>Price</th>
+				<th style='font-size:12px;width: 100px;'>Quantity</th>
+				<th style='font-size:12px;width: 100px;'>Sub total</th>
+				<th style='font-size:12px;width: 100px;'>Action</th>
+			</tr></thead>";
+
+echo "<tbody><tr>";
 
 $tp2 = 0;
 
@@ -164,13 +142,11 @@ foreach ($_SESSION["cart"] as $item)
 	$tp = $item['quan'] * $item['price'];
 	$tp2 += $tp;
 
-	echo "<table cellpadding=0 cellspacing=0 border=0>
-					<tbody><tr>";
-	echo "<td align = 'center'> ".$item['id'];
-	echo "<td align = 'center'><img src = '".$item['image']."' height = 120 width = 120>";
-	echo "<td align = 'center'> ".$item['price'];
-	echo "<td align = 'center'> ".$item['quan'];
-	echo "<td align = 'center'>".$tp;
+	echo "<td align = 'center'> ".$item['id']."</td>";
+	echo "<td align = 'center'><img src = '".$item['image']."' height = 120 width = 120></td>";
+	echo "<td align = 'center'> ".$item['price']."</td>";
+	echo "<td align = 'center'> ".$item['quan']."</td>";
+	echo "<td align = 'center'>".$tp."</td>";
 	echo "<td align = 'center'> <a href ='Cart.php?action&id=$i'> <img src = 'remove_x.gif' height = 10 width = 10> </a> </td>";
 	echo "</tr>";
 	echo "<tr>";
@@ -179,8 +155,10 @@ foreach ($_SESSION["cart"] as $item)
 }
 
 	echo "</tr>";
-	echo "<tr style = 'background-color:#e8e9e7;'> <td colspan = 5 align = right>Grand Total : <td align = 'center'> <span style = 'font-family:Rupee Foradian'><strong>$ </span>".$tp2;;
-	echo "<td> </tr></table>";
+	echo "<tr style = 'background-color:#e8e9e7;'>
+   <td colspan = 5 align = right>Grand Total :</td>
+   <td align = 'center'> <span style = 'font-family:Rupee Foradian'><strong>$ </span>".$tp2;;
+	echo "</td> </tr></table></div>";
 
 
 ?>

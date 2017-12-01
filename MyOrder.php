@@ -33,7 +33,8 @@ body {margin:10;}
 </style>
 
 <body>
-  <div class="icon-bar">
+  <p class = 'f' style="text-align:center font-size: 30px;">My Profile</p>
+  <div class="icon-bar" style="text-align:center;margin-left: 25%;">
     <a href="Myprofile.php" target = "myframe"><i class="fa fa-address-book-o"><br>My Profile</i></a>
     <a href="Changepassword.php" target = "myframe"><i class="fa fa-unlock-alt"><br>Change Password</i></a>
     <a href="MyOrder.php" target = "myframe"><i class="fa fa-edit"><br>My Order</i></a>
@@ -46,7 +47,7 @@ session_start();
 if(!isset($_SESSION['Email']))
 {
 
-echo "<h2>Please Login first...........</h2>";
+echo "<h2>Please Login first</h2>";
 
 }
 else
@@ -56,9 +57,9 @@ include 'Connection.php';
 
 
 
-echo "<h1 class = 'f'> My order </h1> <hr>";
+echo "<p class = 'f'> My order </p> <hr>";
 
-echo "<table cellspacing = 5 cellpadding = 5 style='font-family:Futura Lt BT; font-weight:400;'> <tr align = center  style = 'background-color:#e8e9e7;'>";
+echo "<table cellspacing = 5 cellpadding = 5 style='font-family:Futura Lt BT; font-weight:400;'> <tr align = center>";
 
 echo "<td> <strong>Order Id  <td> <strong> Payment Method <td> <strong> Name of Credit Card <td><strong> Name on Credit Card <td><strong>Credit Card No<td> <strong> <strong>Shipping Address </td><td><strong> Order Ammount  <td><strong> Email id <td><strong> Action </td> <tr align = center>";
 

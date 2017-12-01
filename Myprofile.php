@@ -37,8 +37,8 @@ body {margin:10;}
 </style>
 
 <body>
-  <p class = 'f'> My Profile</p>
-  <div class="icon-bar">
+  <p class = 'f' style="text-align:center font-size: 30px;">My Profile</p>
+  <div class="icon-bar" style="text-align:center;margin-left: 25%;">
     <a href="Myprofile.php" target = "myframe"><i class="fa fa-address-book-o"><br>My Profile</i></a>
     <a href="Changepassword.php" target = "myframe"><i class="fa fa-unlock-alt"><br>Change Password</i></a>
     <a href="MyOrder.php" target = "myframe"><i class="fa fa-edit"><br>My Order</i></a>
@@ -70,7 +70,7 @@ $row = mysqli_fetch_row($result);
 <div style = "height: 1000px; width: 1000px;">
 <br>
 
-<h1 align = center class = "f">My Profile </h1>
+<p class = 'f'> My Profile</p>
 <hr>
 <form id="contact" action="" method="post">
 

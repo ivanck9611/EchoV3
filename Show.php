@@ -87,17 +87,17 @@ p{
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="img/Echo.png" style="width:100%">
+  <a href="AboutUs.html"><img src="img/Echo.png" style="width:100%"></a>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="img/shownow.png" style="width:100%">
+  <a href="collection.php"><img src="img/shownow.png" style="width:100%"></a>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="img/monthlycollection.png" style="width:100%">
+  <a href="monthlycollection.php"><img src="img/monthlycollection.png" style="width:100%"></a>
 </div>
 
 </div>

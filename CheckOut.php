@@ -16,23 +16,6 @@
   font-size: 15px;
 }
 
-#check textarea {
-  height: 100px;
-  max-width: 100%;
-  resize: none;
-  border-color:rgba(0,0,0,0.3);
-}
-
-#check{
-  background: #F9F9F9;
-  padding: 35px;
-  margin-top: 50px;
-  margin-left: 10px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-  width: auto;
-
-}
-
 
 h1{
   font-size: 30px;
@@ -51,9 +34,8 @@ table{
  }
 .tbl-content{
   height:auto;
-  width:632px;
+  width:752px;
   margin-top: 0px;
-  border: 1px solid rgba(23, 21, 21, 0.3);
 }
 th{
   padding: 20px 15px;
@@ -103,7 +85,7 @@ $_SESSION['cart'] = array();
       <thead style="  background-color: rgba(255,255,255,0.3);">
         <tr>
           <th colspan="2">Shipping Info</th>
-          <th>Shipping Method</th>
+          <th colspan="2">Shipping Method</th>
           <th>Payment Method</th>
         </tr>
       </thead>
@@ -111,16 +93,16 @@ $_SESSION['cart'] = array();
         <tr>
           <td>First Name</td>
           <td><input name="sfname" type="text" class="in9" id="sfname" size="20" placeholder="First Name" maxlength = 10 tabindex="1" onblur = "alphabet()" required/></td>
-          <td><input name = "shipcharge" type="radio" value="Free Shipping"tabindex="10">
-            Free Shipping (HKD$0.00)</td>
+          <td><input name = "shipcharge" type="radio" value="Free Shipping"tabindex="10"></td>
+          <td>Free Shipping (HKD$0.00)</td>
           <td><input name = "payment" type="radio" onClick="c2(this)" value="Cash on delivery" tabindex="12">
             Cash on delivery</td>
         </tr>
         <tr>
           <td width="65">Last Name</td>
           <td width="150"><input name="slname" type="text" class = "in9" id="slname" placeholder="Last Name" maxlength = 10 tabindex="2" onblur = "alphabet2()" required/></td>
-          <td><input name = "shipcharge" type="radio" value="Standard Shiping" tabindex="11"required/>
-            Standard Shipping (HKD$30.00)</td>
+          <td><input name = "shipcharge" type="radio" value="Standard Shiping" tabindex="11"required/></td>
+          <td>Standard Shipping (HKD$30.00)</td>
           <td><input name = "payment" type="radio" onClick="c(this)" value="Credit Card" tabindex="13" required/>
             Credit Card</td>
         </tr>
@@ -456,21 +438,17 @@ $_SESSION['cart'] = array();
 <br><br><br>
 
 <div class="tbl-content">
+  <hr1>Your Order</hr1>
   <table cellpadding="0" cellspacing="0" border="0" style="width:-webkit-fill-available;">
     <thead style="  background-color: rgba(255,255,255,0.3);">
       <tr>
-        <th>Your order</th>
-        <th></th>
-        <th></th>
-        <th></th>
-        <th></th>
-      </tr>
-    </thead>
-    <td>Product ID</td>
-    <td>Product Name</td>
-    <td>Price</td>
-    <td>Quantity</td>
-    <td>Sub Total</td>
+        <th style='font-size:12px;width: 100px;'>Product ID</th>
+				<th style='font-size:12px;width: 100px;'>Image</th>
+				<th style='font-size:12px;width: 100px;'>Price</th>
+				<th style='font-size:12px;width: 100px;'>Quantity</th>
+				<th style='font-size:12px;width: 100px;'>Sub total</th>
+				<th style='font-size:12px;width: 100px;'>Action</th>
+      </tr></thead>
     <?php
     $tp2 = 0;
 
@@ -480,49 +458,31 @@ $_SESSION['cart'] = array();
     	$i = $item['id'];
     	$tp = $item['quan'] * $item['price'];
     	$tp2 += $tp;
-
-    	echo "<td align = 'center'> ".$item['id'];
-    	//echo "<td align = 'center'><img src = '".$item['image']."' height = 90 width = 90>";
-      echo "<td align = 'center'> ".$item['name'];
-      echo "<td align = 'center'> ".$item['price'];
-    	echo "<td align = 'center'> ".$item['quan'];
-    	echo "<td align = 'center'>".$tp;
-
+      echo "<td align = 'center'> ".$item['id']."</td>";
+    	echo "<td align = 'center'><img src = '".$item['image']."' height = 120 width = 120></td>";
+    	echo "<td align = 'center'> ".$item['price']."</td>";
+    	echo "<td align = 'center'> ".$item['quan']."</td>";
+    	echo "<td align = 'center'>".$tp."</td>";
+    	echo "<td align = 'center'> <a href ='Cart.php?action&id=$i'> <img src = 'remove_x.gif' height = 10 width = 10> </a> </td>";
+    	echo "</tr>";
     	echo "<tr>";
     }
 
-    	echo "</tr>";
-    	echo "<tr style = 'background-color:#e8e9e7;'> <td colspan = 4 align = right>Grand Total :
-      <td align = 'center'>
-      <span style = 'font-family:Rupee Foradian'><strong>HKD$ </span>".$tp2;
-    	echo "</tr></table>";
-    ?>          </td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-            </tr>
-            <tr>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td colspan="6">
-            </tr>
+    echo "</tr>";
+  	echo "<tr style = 'background-color:#e8e9e7;'>
+     <td colspan = 5 align = right>Grand Total :</td>
+     <td align = 'center'>
+     <span style = 'font-family:Rupee Foradian'>
+     <strong>$ </span>".$tp2;;
+  	echo "</td> </tr></table></div>";
+    ?>
   </table>
+
   <div align="right">
+    <br>
+    <br>
     <input type="submit" class = "Addtocart" name="submit" value="Place Order Now">
-  </div></td>
+  </div>
 </form>
 <?php
 }
