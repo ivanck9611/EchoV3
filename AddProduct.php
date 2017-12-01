@@ -38,66 +38,51 @@ function seeList(form)
 <form  method="post" action="<?php $_PHP_SELF ?>" enctype = "multipart/form-data">
 <table width="450" cellpadding="9" cellspacing="9">
 	<tr>
-	 <td>name</td>
+	 <td>Name</td>
 	 <td>
-
 				 <textarea name="name" rows="1" cols="35" required ></textarea>
 				 <div style = "visibility:hidden;"><input type = "text" name = "lable" id = "optionlable"></div></td>
  </tr>
  <tr>
   <tr>
     <td>Brand Name</td>
-    <td><select name="brands" class = "in40">
-      <option> ------------------------Select------------------------</option>
-	 <option value = "None">None</option>
-<optgroup name = "MansBrand" label = "Man's Brand">
-	<option value = "ASUS"> ASUS </option>
-	<option value = "Turtle">Turtle </option>
-	<option value = "Tom Hatton">Tom Hatton </option>
-	<option value = "Peter England">Peter England </option>
-	<option value = "LondonBridge">LondonBridge </option>
-	<option value = "Lotto">Lotto </option>
-<optgroup name = "woman's Brand" label = "Woman's Brand">
-      <option value ="Bombay Fashion">Bombay Fashion</option>
-      <option value ="Kiari">Kiari</option>
-      <option value ="Aurilia">Aurilia</option>
-      <option value ="Allen Solly">Allen Solly</option>
-      <option value ="Karigari">Karigari</option>
-      <option value ="Morden Fashion">Morden Fashion</option>
-      <option value ="Shripa">Shripa</option>
-	  <option value ="WOMEN">Woman</option>
-	  <option value ="Bombay style">Bombay style</option>
-	  <option value ="Varsiddhi">Varsiddhi</option>
-    </select></td>
+    <td>
+			<textarea name="brands" rows="1" cols="35" required ></textarea>
+			<div style = "visibility:hidden;"><input type = "text" name = "lable" id = "optionlable"></div></td>
+
   </tr>
   <tr>
     <td>Product Type</td>
     <td>
-
 <select name="menu1" id = "m" class = "in40">
 <option> ------------------------Select------------------------</option>
-<optgroup name = "menclothes" label = "Men's Clothes">
-<option  label = "router" value="router"> router</option>
-<option label = "Slogan T-shirts" value="Collection/Men/slogan/"> Slogan T-shirts</option>
-<option label = "V-neck T-shirts" value="Collection/Men/Vneck/"> V-neck T-shirts</option>
-<option label = "Round neck T-shirts" value="Collection/Men/Rneck/"> Round neck T-shirts</option>
-<option label = "Full sleeve Tees" value="Collection/Men/Full sleev/"> Full sleeve Tees</option>
+<optgroup name = "producttype" label = "Category">
+<option  label = "router" value="router"><rb></rb>Router</option>
+<option label = "headphone" value="headphone">Headphone</option>
+<option label = "speaker" value="speaker">Speaker</option>
+<option label = "hifi" value="hifi">Hi-Fi</option>
+<option label = "portablespeaker" value="portablespeaker">Portable speaker</option>
+<option label = "mouse" value="mouse">Mouse</option>
+<option label = "keyboard" value="keyboard">Keyboard</option>
 </optgroup>
-    </select>  </tr>
+    </select>
+	</td></tr>
 
-
+<tr>
+<td>Product Image Path</td>
+<td>
 <select name="menu2" id = "m" class = "in40">
-<optgroup name = "womanclothes" label = "Woman's Clothes">
-<option label = "Dresses-Anarkalis" value="img/products/router/"> router img</option>
-<option label = "Indo-Ethnic Kurtas And Tops" value="Collection/Woman/Indo-Ethnic Kurtas & Tops/"> Indo-Ethnic Kurtas And Tops</option>
-<option label = "Saris" value="Collection/Woman/Saree/"> Saris</option>
-<option label = "Skirts" value="Collection/Woman/Skirt/"> Skirts</option>
-<option label = "Trousers and shorts-Pants And Palazzos" value="Collection/Woman/Trousers-Palazzo/"> Trousers and shorts-Pants And Palazzos</option>
-<option label = "Tshirts-Shirts" value="Collection/Woman/Tshirts-Shirts-Tunics-maxi-gown/"> Tshirts-Shirts</option>
-<option label = "Wedding clothing" value="Collection/Woman/Weddingclothing/"> Wedding clothing</option>
-<option label = "Western Wall" value="Collection/Woman/WesternWall/"> Western Wall</option>
+<optgroup name = "imgpath" label = "Image Path">
+<option label = "routerpath" value="img/products/router/">Router Img Path</option>
+<option label = "headphonepath" value="img/products/headphone">Headphone Img Path</option>
+<option label = "speakerpath" value="img/products/speaker">Speaker Img Path</option>
+<option label = "hifipath" value="img/products/HiFi/">Hi-Fi Img Path</option>
+<option label = "portablespeakerpath" value="img/products/PortableSpeaker">Portable Speaker Img Path</option>
+<option label = "mouse" value="img/products/mouse">Mouse Img Path</option>
+<option label = "keyboard" value="img/products/keyboard">Keyboard Img Path</option>
 </optgroup>
-    </select>  </tr>
+    </select>
+	</td></tr>
 
     <td>Price</td>
     <td style = "font-family:Rupee Foradian">$
@@ -133,30 +118,54 @@ include 'Connection.php';
 if(isset($_POST['submit']))
 {
 
+//name
 $n = $_POST['name'];
 
 $b = $_POST['brands'];
 
+//category
 $c = $_POST['menu1'];
 
 $path = $_POST['menu2'];
 
+//price
 $p = $_POST['price'];
 
 $lab =  trim($_POST['lable']);
 
 $tf = $path.basename($_FILES['FileToUpload']['name']);
 
-$np = "/poject/".$tf;
+//img path
+$np = $tf;
 
 if($c == 'router')
 {
 	mysqli_query($db,"INSERT INTO router(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 
-elseif($c == 'woman')
+elseif($c == 'headphone')
 {
-	mysqli_query($db,"INSERT INTO woman(ProductType, Brand, Price, Imagepath, Description) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO hedphone(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+}
+elseif($c == 'speaker')
+{
+	mysqli_query($db,"INSERT INTO speaker(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+}
+elseif($c == 'hifi')
+{
+	mysqli_query($db,"INSERT INTO hifi(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+}
+elseif($c == 'portablespeaker')
+{
+	mysqli_query($db,"INSERT INTO portablespeaker(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+}
+elseif($c == 'mouse')
+{
+	mysqli_query($db,"INSERT INTO mouse(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+}
+elseif($c == 'keyboard')
+{
+	mysqli_query($db,"INSERT INTO keyboard(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
 }
 
 

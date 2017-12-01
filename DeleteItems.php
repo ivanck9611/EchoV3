@@ -31,8 +31,8 @@ else
       <optgroup name = "inputdevices" label = "Category">
         <option> router</option>
         <option> speaker</option>
-        <option> hi-fi</option>
-        <option> portable speaker</option>
+        <option> hifi</option>
+        <option> portablespeaker</option>
         <option> headphone</option>
         <option> mouse</option>
         <option> keyboard</option>
@@ -70,6 +70,34 @@ elseif($m == 'headphone')
 {
 	$result = mysqli_query($db,"SELECT * FROM headphone where category = '$m'");
 }
+elseif($m == 'speaker')
+{
+	$result = mysqli_query($db,"SELECT * FROM speaker where category = '$m'");
+}
+elseif($m == 'hifi')
+{
+	$result = mysqli_query($db,"SELECT * FROM hifi where category = '$m'");
+}
+elseif($m == 'portablespeaker')
+{
+	$result = mysqli_query($db,"SELECT * FROM portablespeaker where category = '$m'");
+}
+elseif($m == 'mouse')
+{
+	$result = mysqli_query($db,"SELECT * FROM mouse where category = '$m'");
+}
+elseif($m == 'keyboard')
+{
+	$result = mysqli_query($db,"SELECT * FROM keyboard where category = '$m'");
+}
+
+
+
+
+
+
+
+
 
 echo "<form action = 'Delete.php' method = 'post'>";
 
@@ -80,18 +108,19 @@ echo "<td> <strong> &nbsp; </td>";
 echo "<td> <strong> Product Id </td> ";
 echo "<td> <strong>Product Image </td>";
 echo "<td> <strong>Product Brand </td>";
-echo "<td> <strong>Price </td><tr>";
+echo "<td> <strong>Price </td>";
+echo "<td> </td><tr>";
 
 while($row = mysqli_fetch_array($result))
 {
 
-	echo "<td> <input type  = 'radio' name = 'pid' value = '".$row['id']."'  required>";
-	echo "<td> <input type = 'text' value = '".$row['id']."' readonly size = 1>";
-	echo "<td> <img src = '".$row['path']."' height = 245 width = 245";
-	echo "<td> <input type = 'text' value = '".$row['brand']."'  readonly>";
-	echo "<td style = 'font-family:Rupee Foradian'>$&nbsp;<input type = 'text' name = 'price' value = '".$row['price']."' size = 5  readonly>";
+	echo "<td> <input type  = 'radio' name = 'pid' value = '".$row['id']."'  required></td>";
+	echo "<td>".$row['id']."</td>";
+	echo "<td> <img src = '".$row['path']."' height = 245 width = 245</td>";
+	echo "<td>".$row['brand']."</td>";
+	echo "<td>".$row['price']."</td>";
 	echo "<td> <input type = 'submit'  class = 'd' value = 'Delete'> </td>";
-	echo "<tr>";
+	echo "<td></td><tr>";
 }
 
 echo "</td></tr> </table>";

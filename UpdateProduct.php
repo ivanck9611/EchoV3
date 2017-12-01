@@ -101,7 +101,7 @@ while($row = mysqli_fetch_array($result))
 	$count++;
 	$id = $row[0];
 
-	echo "<td style = 'background-color:#e8e9e7;'><a href = 'UpdateItemsDetails.php?i=$id&c=$m'> <img src = '".$row[5]."' height = 307 width = 230> </a>";
+	echo "<td style = 'background-color:#e8e9e7;'><a href = 'UpdateItemsDetails.php?i=$id&c=$m'> <img src = '".$row[5]."' height = 245 width = 245> </a>";
 
 	if($count == 5)
 	{
