@@ -64,18 +64,20 @@ body {margin:10;}
 <p class = "f">Change Password</p>
 <hr>
 
-<form id="contact" action="" method="post">
+<form id="contact" <form name="Change" action = "Updatepassword.php" method = "post" onSubmit="return check()">
 
   <fieldset>
     New Password:
     <br>
-    <input name="newpassword" placeholder="New Password" type="text" tabindex="1" required autofocus>
+    <input name="npassword" placeholder="New Password" type="text" tabindex="1" required autofocus>
   </fieldset>
   <fieldset>
     Comfirm Password:
     <br>
-    <input name="comfirmpassword" placeholder="Comfirm Password" type="text" tabindex="1" required autofocus>
-  </fieldset>
+    <input name="c_password" placeholder="Comfirm Password" type="text" tabindex="1" required autofocus>
+    <br>
+    </fieldset>
+    <input type="submit" name = "submit" value = " Change Password " class = "Addtocart">
 </form>
 </body>
 </html>

@@ -63,9 +63,9 @@ elseif($c == 'hifi')
 	$newstring = str_replace('/img/poducts/hifi/','',$string);
 	$query = "DELETE from hifi where id = '$p'";
 
-	$l2 = mysqli_query($db,$query);
+	$l3 = mysqli_query($db,$query);
 
-	if($l2)
+	if($l3)
 	{
 		echo "<h2> Successfully Deleted.........";
 		unlink($newstring);
@@ -87,9 +87,9 @@ elseif($c == 'portable speaker')
 	$newstring = str_replace('/img/poducts/portable speaker/','',$string);
 	$query = "DELETE from portable speaker where id = '$p'";
 
-	$l2 = mysqli_query($db,$query);
+	$l4 = mysqli_query($db,$query);
 
-	if($l2)
+	if($l4)
 	{
 		echo "<h2> Successfully Deleted.........";
 		unlink($newstring);
@@ -109,11 +109,11 @@ elseif($c == 'headphone')
 	$r2 = mysqli_fetch_array($r);
 	$string =  $r2['path'];
 	$newstring = str_replace('/img/poducts/headphone/','',$string);
-	$query = "DELETE from path where id = '$p'";
+	$query = "DELETE from headphone where id = '$p'";
 
-	$l2 = mysqli_query($db,$query);
+	$l5 = mysqli_query($db,$query);
 
-	if($l2)
+	if($l5)
 	{
 		echo "<h2> Successfully Deleted.........";
 		unlink($newstring);
@@ -134,9 +134,9 @@ elseif($c == 'keyboard')
 	$newstring = str_replace('/img/poducts/keyboard/','',$string);
 	$query = "DELETE from keyboard where id = '$p'";
 
-	$l2 = mysqli_query($db,$query);
+	$l6 = mysqli_query($db,$query);
 
-	if($l2)
+	if($l6)
 	{
 		echo "<h2> Successfully Deleted.........";
 		unlink($newstring);
@@ -158,9 +158,9 @@ elseif($c == 'mouse')
 	$newstring = str_replace('/img/poducts/mouse/','',$string);
 	$query = "DELETE from mouse where id = '$p'";
 
-	$l2 = mysqli_query($db,$query);
+	$l7 = mysqli_query($db,$query);
 
-	if($l2)
+	if($l7)
 	{
 		echo "<h2> Successfully Deleted.........";
 		unlink($newstring);

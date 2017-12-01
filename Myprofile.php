@@ -72,30 +72,30 @@ $row = mysqli_fetch_row($result);
 
 <p class = 'f'> My Profile</p>
 <hr>
-<form id="contact" action="" method="post">
+<form id="contact" name = "myprofile" method = "post" action = "updateProfile.php" onsubmit = "return validation3()">
 
   <fieldset>
     First Name:
     <br>
-    <input name="firstname" placeholder="<?php echo $row[1] ?>" type="text" tabindex="1" required autofocus>
+    <input name="f" placeholder="<?php echo $row[1] ?>" type="text" tabindex="1" required autofocus>
   </fieldset>
   <fieldset>
     Last Name:
     <br>
-    <input name="lastname" placeholder="<?php echo $row[2] ?>" type="text" tabindex="1" required autofocus>
+    <input name="l" placeholder="<?php echo $row[2] ?>" type="text" tabindex="1" required autofocus>
   </fieldset>
   <fieldset>
     Gender:
     <br>
-    <input name="gender" placeholder="<?php echo $row[3] ?>" type="text" tabindex="1" required autofocus>
+    <input name="g" placeholder="<?php echo $row[3] ?>" type="text" tabindex="1" required autofocus>
   </fieldset>
   <fieldset>
     Contact no:
     <br>
-    <input name="contactno" placeholder="<?php echo $row[4] ?>" type="text" tabindex="1" required autofocus>
+    <input name="c" placeholder="<?php echo $row[4] ?>" type="text" tabindex="1" required autofocus>
   </fieldset>
   <fieldset>
-    <button name="send" type="submit" id="contact-submit" data-submit="...Sending">Save Changes</button>
+    <input type="submit" name = "submit" class = "Addtocart" value = "Save changes"/>
   </fieldset>
 
 </form>

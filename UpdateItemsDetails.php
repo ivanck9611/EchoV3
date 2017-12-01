@@ -76,14 +76,14 @@ while($row6 = mysqli_fetch_row($r))
 {
 
 echo " <td align = center rowspan= 7><img src ='".$row6[5]."' class = 'imgbg' height = 245 width = 245><br></td>";
-echo " <td>Product Id :<td>".$row6[0]."</td>";
+echo " <td>Product Id :<td><input type = 'text' name = 'id' class = 'in7' value = '".$row6[0]."' size = 60 readonly></td>";
 echo "</tr> <tr>";
 echo " <td>Product Name: <td><input type = 'text' name = 'pn' class = 'in7' value = '".$row6[2]."' size = 60 readonly> </td>";
 echo "</tr> <tr>";
 echo " <td>Brand: <td>
 <input type = 'text' name = 'b' class = 'in7' value = '".$row6[3]."' size = 60 readonly> </td>";
 echo "</tr> <tr>";
-echo " <td>Price<td><span style = 'font-family:Rupee Foradian'>$ </span> 
+echo " <td>Price<td><span style = 'font-family:Rupee Foradian'>$ </span>
 <input type = 'text' class = 'in60' name = 'p' value = '".$row6[4]."' size = 58 required> </td>";
 
 echo "</tr> <tr>";

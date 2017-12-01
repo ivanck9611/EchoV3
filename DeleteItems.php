@@ -118,7 +118,7 @@ while($row = mysqli_fetch_array($result))
 	echo "<td>".$row['id']."</td>";
 	echo "<td> <img src = '".$row['path']."' height = 245 width = 245</td>";
 	echo "<td>".$row['brand']."</td>";
-	echo "<td>".$row['price']."</td>";
+  echo "<td> <input type = 'text' name = 'price' value = '".$row['price']."'  readonly> </td>";
 	echo "<td> <input type = 'submit'  class = 'd' value = 'Delete'> </td>";
 	echo "<td></td><tr>";
 }

@@ -145,27 +145,27 @@ if($c == 'router')
 
 elseif($c == 'headphone')
 {
-	mysqli_query($db,"INSERT INTO hedphone(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO headphone(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 elseif($c == 'speaker')
 {
-	mysqli_query($db,"INSERT INTO speaker(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO speaker(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 elseif($c == 'hifi')
 {
-	mysqli_query($db,"INSERT INTO hifi(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO hifi(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 elseif($c == 'portablespeaker')
 {
-	mysqli_query($db,"INSERT INTO portablespeaker(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO portablespeaker(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 elseif($c == 'mouse')
 {
-	mysqli_query($db,"INSERT INTO mouse(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO mouse(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 elseif($c == 'keyboard')
 {
-	mysqli_query($db,"INSERT INTO keyboard(Category, name, brand, price, path) VALUES('".$lab."', '".$b."', '".$p."', '".$np."', '".$desc."')") or die("Failed to Insert Data in Database");
+	mysqli_query($db,"INSERT INTO keyboard(Category, name, brand, price, path) VALUES('".$c."', '".$n."', '".$b."', '".$p."', '".$np."')") or die("Failed to Insert Data in Database");
 }
 
 
