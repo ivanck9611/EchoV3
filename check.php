@@ -64,7 +64,7 @@ $exd = $m."/".$y;
 if($sm == 'Standard Shiping')
 {
 
-	$charge = 8.50;
+	$charge = 30;
 }
 else
 {
@@ -86,12 +86,12 @@ $tp2 = $tp2 + $charge;
 
 if($pm == 'Credit Card')
 {
-$r = mysqli_query($db,"INSERT INTO orders(FirstName, LastName, Email, ShippingAddress, Country, State, City, Zip_code, contactNo, ShippingMethod, PaymentMethod, TypeOfCreditcard, NameOnCC, CCNo, CVV, ExpirationDate, Email_id, Order_Ammount, temp) VALUES('".$fn."', '".$ln."', '".$e."', '".$add."', '".$cont."', '".$s."', '".$city."', '".$z."', '".$cn."', '".$sm."', '".$pm."', '".$ct."', '".$nc."', '".$ccno."', '".$cv."', '".$exd."', '".$em."', '".$tp2."', '".$odt."')") or die("Failed to Insert Data");
+$r = mysqli_query($db,"INSERT INTO orders(FirstName, LastName, Email, ShippingAddress, Country, Zip_code, contactNo, ShippingMethod, PaymentMethod, TypeOfCreditcard, NameOnCC, CCNo, CVV, ExpirationDate, Email_id, Order_Ammount, temp) VALUES('".$fn."', '".$ln."', '".$e."', '".$add."', '".$cont."', '".$s."', '".$city."', '".$z."', '".$cn."', '".$sm."', '".$pm."', '".$ct."', '".$nc."', '".$ccno."', '".$cv."', '".$exd."', '".$em."', '".$tp2."', '".$odt."')") or die("Failed to Insert Data");
 }
 else
 {
 
-$r = mysqli_query($db, "INSERT INTO orders(FirstName, LastName, Email, ShippingAddress, Country, State, City, Zip_code, contactNo, ShippingMethod, PaymentMethod, Email_id, Order_Ammount, temp) VALUES('".$fn."', '".$ln."', '".$e."', '".$add."', '".$cont."', '".$s."', '".$city."', '".$z."', '".$cn."', '".$sm."', '".$pm."', '".$em."', '".$tp2."', '".$odt."')") or die("Failed to Insert Data");
+$r = mysqli_query($db, "INSERT INTO orders(FirstName, LastName, Email, ShippingAddress, Country, Zip_code, contactNo, ShippingMethod, PaymentMethod, Email_id, Order_Ammount, temp) VALUES('".$fn."', '".$ln."', '".$e."', '".$add."', '".$cont."', '".$s."', '".$city."', '".$z."', '".$cn."', '".$sm."', '".$pm."', '".$em."', '".$tp2."', '".$odt."')") or die("Failed to Insert Data");
 
 }
 

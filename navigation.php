@@ -58,8 +58,6 @@ th{
   font-size: 12px;
   width:auto;
   text-transform: uppercase;
-  border-bottom: solid 1px rgba(23, 21, 21, 0.3);
-
 }
 td{
   padding: 15px;
