@@ -11,7 +11,7 @@ table{
   background-color: rgba(255,255,255,0.3);
  }
 .tbl-content{
-  height:300px;
+  height:auto;
   overflow-x:auto;
   margin-top: 0px;
   border: 1px solid rgba(255,255,255,0.3);
@@ -65,9 +65,29 @@ $_SESSION['cart'] = array();
 				{
 					$q = "select * from router where id = $p_id ";
 				}
-				else
+				elseif($cate == 'headphone')
 				{
-					$q = "select * from woman where Product_id = $p_id";
+					$q = "select * from headphone where id = $p_id";
+				}
+        elseif($cate == 'keyboard')
+				{
+					$q = "select * from keyboard where id = $p_id";
+				}
+        elseif($cate == 'speaker')
+				{
+					$q = "select * from speaker where id = $p_id";
+				}
+        elseif($cate == 'PortableSpeaker')
+				{
+					$q = "select * from portablespeaker where id = $p_id";
+				}
+        elseif($cate == 'HiFi')
+				{
+					$q = "select * from hifi where id = $p_id";
+				}
+        elseif($cate == 'mouse')
+				{
+					$q = "select * from mouse where id = $p_id";
 				}
 
 					$result = mysqli_query($db, $q) or die("Error in Selecting Data");

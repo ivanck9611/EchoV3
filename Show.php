@@ -92,7 +92,7 @@ p{
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <a href="collection.php"><img src="img/shownow.png" style="width:100%"></a>
+  <a href="Category.php"><img src="img/shownow.png" style="width:100%"></a>
 </div>
 
 <div class="mySlides fade">
