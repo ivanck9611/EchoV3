@@ -115,25 +115,66 @@ $string2 = $_GET['p2'];
 
 $string3 = $_GET['p3'];
 
-if($string == 'Men')
+if($string == 'router')
 {
 
-$query = "select * from men where ProductType = '$string3' and Product_id not in(select Product_id from men where Product_id = '$string2')";
+$query = "select * from router where Category = '$string' and id not in(select id from router where id = '$string2')";
 
 $result5 = mysqli_query($db,$query) or die("There is no Data");
 
 }
 
 
-else
+elseif($string == 'headphone')
 {
 
-$query2 = "select * from woman where ProductType = '$string3' and Product_id not in(select Product_id from woman where Product_id = '$string2')";
+  $query = "select * from headphone where Category = '$string' and id not in(select id from headphone where id = '$string2')";
 
-$result5 = mysqli_query($db,$query2) or die("There is no Data");
+  $result5 = mysqli_query($db,$query) or die("There is no Data");
 
 }
 
+elseif($string == 'HiFi')
+{
+
+  $query = "select * from hifi where Category = '$string' and id not in(select id from hifi where id = '$string2')";
+
+  $result5 = mysqli_query($db,$query) or die("There is no Data");
+
+}
+
+elseif($string == 'speaker')
+{
+
+  $query = "select * from speaker where Category = '$string' and id not in(select id from speaker where id = '$string2')";
+
+  $result5 = mysqli_query($db,$query) or die("There is no Data");
+
+}
+elseif($string == 'PortableSpeaker')
+{
+
+  $query = "select * from portablespeaker where Category = '$string' and id not in(select id from portablespeaker where id = '$string2')";
+
+  $result5 = mysqli_query($db,$query) or die("There is no Data");
+
+}
+elseif($string == 'keyboard')
+{
+
+  $query = "select * from keyboard where Category = '$string' and id not in(select id from keyboard where id = '$string2')";
+
+  $result5 = mysqli_query($db,$query) or die("There is no Data");
+
+}
+elseif($string == 'mouse')
+{
+
+  $query = "select * from mouse where Category = '$string' and id not in(select id from mouse where id = '$string2')";
+
+  $result5 = mysqli_query($db,$query) or die("There is no Data");
+
+}
 
 
 echo "<table cellspacing = 10 cellpadding = 10 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
@@ -146,7 +187,7 @@ $c++;
 
 echo "<td class = 'imgbg'>
 
-<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['Imagepath']."'> </a><br> <span style = 'font-family:Rupee Foradian'>$ </span>".$row['Price'];
+<a href ='DisplayProduct.php?p=$row[1]&p2=$row[0]&p3=$row[2]'><img src ='".$row['path']."' class = 'imgbg' height = 245 width = 245> </a><br> <span style = 'font-family:Rupee Foradian'>$ </span>".$row['price'];
 
 if($c == 4)
 {

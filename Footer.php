@@ -13,7 +13,7 @@
 </div>
 
 <div class="right footertext">
-     <a href="index.php">Facebook</a>
-     <a href="index.php">Instagram</a>
+     <a href="https://www.facebook.com/chan.echo.7758">Facebook</a>
+     <a href="https://www.instagram.com/echo_geeksstore/">Instagram</a>
      <a href="index.php">Twitter</a>
 </div>
