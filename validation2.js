@@ -5,48 +5,48 @@ function c2()
 		var nc = document.checkout.Nc;
 		var ccn = document.checkout.CCno;
 		var cv = document.checkout.cvv;
-		
+
 		var nc2 = nc.value.length;
 		var ccn2 = ccn.value.length;
 		var cv2 = cv.value.length;
 
 if(nc2 == 0)
 {
-	
+
 	alert("Please Enter Name on Credit Card....");
 	document.checkout.Nc.focus();
 }
 else
 {
 	document.checkout.ccn.focus();
-	
+
 }
 if(ccn2 == 0)
 {
-	
+
 	alert("Please Enter Credit Card Number.....");
 	document.checkout.ccn.focus();
 }
 else
 {
 	document.checkout.cvv.focus();
-	
+
 }
 
 if(cv2 == 0)
 {
-	
+
 	alert("Please Enter CVV Number");
 	document.checkout.cvv.focus();
 }
 else
 {
 	document.checkout.mon.focus();
-	
+
 }
 
 		}
-	
+
 }
 
 function c(radio)
@@ -71,33 +71,33 @@ document.getElementById("creditcard").style.visibility = visSetting;
 
 function validation5()
 {
-	
+
 	if(alphabet())
-	{	
-				return true;								
+	{
+				return true;
 	}
-	
+
 	if(alphabet2())
 	{
-			return true;								
+			return true;
 	}
-	
+
 	if(numb())
 	{
-						return true;								
-	}	
+						return true;
+	}
 		if(numb2())
 	{
-						return true;								
-	}	
-	
+						return true;
+	}
+
 	if(validateE())
 	{
-		
+
 		return true;
 	}
-	
-	
+
+
 	return false;
 
 }
@@ -108,32 +108,15 @@ function alphabet()
 f = document.checkout.sfname;
 fl = f.value.length;
 
-var alphaExpe2 = /^[a-zA-Z]+$/;
+var alphaExpe2 = /^[a-zA-Z]+$/
 
-	if(f.value.match(alphaExpe2)) 
-	{ 
-		f.style.color = "black";	
-		document.checkout.slname.focus();
-
-		return true; 
-				
-	}
-	else if(fl == 0)
+if(fl == 0)
 	{
 	f.value = "Could not be Empty";
-	f.style.color = "red";	
+	f.style.color = "red";
 	document.checkout.sfname.focus();
-	return false; 		
+	return false;
 	}
-	else
-	{
-	 
-	f.value = "Only Letter are aceepted";
-	f.style.color = "red";	
-	document.checkout.sfname.focus();
-	return false; 
-	}
-	
 }
 
 
@@ -142,34 +125,34 @@ function alphabet2()
 {
 
 l = document.checkout.slname;
-len = l.value.length;	
+len = l.value.length;
 var alphaExp = /^[a-zA-Z]+$/;
 
 
-		if(l.value.match(alphaExp)) 
-		{ 
+		if(l.value.match(alphaExp))
+		{
 			document.checkout.semail.focus();
-			l.style.color = "black";	
-			return true; 
-			
+			l.style.color = "black";
+			return true;
+
 		}
 		else if(len == 0)
 		{
-			
+
 			l.value = "Could not be Empty";
-			l.style.color = "red";	
+			l.style.color = "red";
 			document.checkout.slname.focus();
-			return false; 
-			
+			return false;
+
 		}
 		else
 		{
-		
+
 			l.value = "Only Letter are aceepted";
-			l.style.color = "red";	
+			l.style.color = "red";
 			document.checkout.slname.focus();
-			return false; 
-			
+			return false;
+
 		}
 }
 
@@ -178,33 +161,33 @@ function numb()
 {
 
  c = document.checkout.stel2;
- 
+
  cl = c.value.length;
- 	
+
 var nExp = /^[0-9]+$/;
 
 
-		if(c.value.match(nExp)) 
-		{ 
-			c.style.color = "black";	
-			return true; 
-			
-		} 
+		if(c.value.match(nExp))
+		{
+			c.style.color = "black";
+			return true;
+
+		}
 		else if(cl == 0)
 		{
-			c.value = "Could Not be Empty";	
-			c.style.color = "red";	
+			c.value = "Could Not be Empty";
+			c.style.color = "red";
 			document.checkout.stel2.focus();
-			return false; 
-		
+			return false;
+
 		}
 		else
 		{
-			c.value = "Only Numbers are accepted";	
-			c.style.color = "red";	
+			c.value = "Only Numbers are accepted";
+			c.style.color = "red";
 			document.checkout.stel2.focus();
-			return false; 
-			
+			return false;
+
 		}
 
 
@@ -214,34 +197,34 @@ function numb2()
 {
 
  c2 = document.checkout.zcode;
- 
+
  c3 = c.value.length;
- 	
+
 var nExp = /^[0-9]+$/;
 
 
-		if(c2.value.match(nExp)) 
-		{ 
-	
-			c2.style.color = "black";	
-			return true; 
-			
-		} 
+		if(c2.value.match(nExp))
+		{
+
+			c2.style.color = "black";
+			return true;
+
+		}
 		else if(c3 == 0)
 		{
-			c2.value = "Could Not be Empty";	
-			c2.style.color = "red";	
+			c2.value = "Could Not be Empty";
+			c2.style.color = "red";
 			document.checkout.zcode.focus();
-			return false; 
-		
+			return false;
+
 		}
 		else
 		{
-			c2.value = "Only Numbers are accepted";	
-			c2.style.color = "red";	
+			c2.value = "Only Numbers are accepted";
+			c2.style.color = "red";
 			document.checkout.zcode.focus();
-			return false; 
-			
+			return false;
+
 		}
 
 
@@ -256,25 +239,24 @@ var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
 
 		if(uemail.value.match(mailformat))
 		{
-			uemail.style.color = "black";		
+			uemail.style.color = "black";
 			return true;
 		}
 		else if(el == 0)
 		{
-			uemail.value = "Could Not be Empty";	
-			uemail.style.color = "red";		
+			uemail.value = "Could Not be Empty";
+			uemail.style.color = "red";
 
 				document.checkout.semail.focus();
 				return false;
-			
+
 		}
 		else
 		{
-			uemail.value = "Invalid Email id";	
-			uemail.style.color = "red";			
+			uemail.value = "Invalid Email id";
+			uemail.style.color = "red";
 
 				document.checkout.semail.focus();
 				return false;
 		}
 }
-

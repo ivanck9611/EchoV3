@@ -117,6 +117,7 @@ text-align:center;
     <a href="index.php">HOME</a>
     <a href="Category.php" target="myframe">CATEGORY</a>
     <a href="AboutUs.html" target="myframe">ABOUT US</a>
+    <a href="FAQ.php" target="myframe">FAQ</a>
     <a href="contactus.php" target="myframe">CONTACT US</a>
     <a href="Cart.php" target="myframe">CART</a>
 

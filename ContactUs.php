@@ -7,6 +7,7 @@
 </head>
 <body>
 <p class = 'f'> CONTACT US</p>
+
 </br>
 <hr>
   <form id="contact" action="" method="post">
@@ -25,7 +26,7 @@
       <textarea name="message" placeholder="Type your message here...." tabindex="5" required></textarea>
     </fieldset>
     <fieldset>
-      <button name="send" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <input type="Submit" name="Send" value="Send" class="button" id="contact-submit">
     </fieldset>
   </form>
 

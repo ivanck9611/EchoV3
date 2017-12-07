@@ -11,7 +11,7 @@ include 'Connection.php';
 $result = mysqli_query($db,"SELECT * FROM router WHERE sales=1");
 
 
-echo "<p class = 'f'> MOUTHLY COLLECTION</p>";
+echo "<p class = 'f'> MONTHLY COLLECTION</p>";
 
 echo "<table cellspacing = 5 cellpadding = 5 style='font-family:Futura Lt BT; font-weight:400;'> <tr>";
 

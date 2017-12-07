@@ -79,7 +79,7 @@ while($row = mysqli_fetch_row($result))
 	echo "<td>".$row[10];
 	echo "<td>".$row[12];
 	echo "<td>".$row[7];
-	echo "<td>".$row[15];
+	echo "<td>"."HKD$".$row[15];
 	echo "<td>".$row[18];
 	echo "<td> <a href = 'viewcart.php?id=$row[0]&em=$row[18]'>View </a>";
 	echo "<tr align = center>";
